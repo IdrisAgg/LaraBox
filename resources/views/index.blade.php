@@ -11,6 +11,6 @@
 
 <h1>page d'accueil</h1>
 
-<div class="">Ok ça fonctionne</div>
+<div class="">Ici l'accueil</div>
 </body>
 </html>
