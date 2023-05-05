@@ -66,11 +66,7 @@ class RestaurentController extends Controller
     public function createResto(Request $request){
         $this->validate($request,[
             'nom'=>'required',
-            'horaireStart'=>'required',
-            'horaireEnd'=>'required',
-            'numero'=>'required',
-            'adresse'=>'required',
-            'ville'=>'required',
+            
         ]);
 
         $resto = new restaurent();
@@ -83,7 +79,7 @@ class RestaurentController extends Controller
         $resto->ville = $request->input('ville');
         $resto->save();
 
-        return redirect('/');
+        return redirect('/afficheAllResto');
     }
 
     public function formResto(){

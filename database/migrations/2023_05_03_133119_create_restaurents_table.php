@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('restaurents', function (Blueprint $table) {
             $table->id();
-            $table->string("nom");
-            $table->string("horaireDebut");
-            $table->string("horaireFin");
-            $table->string("numero");
-            $table->string("adresse");
-            $table->string("ville");
+            $table->string("nom")->nullable();
+            $table->string("horaireDebut")->nullable();
+            $table->string("horaireFin")->nullable();
+            $table->string("numero")->nullable();
+            $table->string("adresse")->nullable();
+            $table->string("ville")->nullable();
             $table->timestamps();
         });
     }
