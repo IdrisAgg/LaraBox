@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('restaurents', function (Blueprint $table) {
             $table->id();
             $table->string("nom");
-            $table->string("numéro");
+            $table->string("horaireDebut");
+            $table->string("horaireFin");
+            $table->string("numero");
             $table->string("adresse");
             $table->string("ville");
             $table->timestamps();

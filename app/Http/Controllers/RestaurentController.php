@@ -66,6 +66,8 @@ class RestaurentController extends Controller
     public function createResto(Request $request){
         $this->validate($request,[
             'nom'=>'required',
+            'horaireStart'=>'required',
+            'horaireEnd'=>'required',
             'numero'=>'required',
             'adresse'=>'required',
             'ville'=>'required',
@@ -74,7 +76,9 @@ class RestaurentController extends Controller
         $resto = new restaurent();
 
         $resto->nom = $request->input('nom');
-        $resto->numéro = $request->input('numero');
+        $resto->horaireDebut = $request->input('horaireStart');
+        $resto->horaireFin = $request->input('horaireEnd');
+        $resto->numero = $request->input('numero');
         $resto->adresse = $request->input('adresse');
         $resto->ville = $request->input('ville');
         $resto->save();
@@ -86,4 +90,9 @@ class RestaurentController extends Controller
         return view('resto.formResto');
     }
    
+
+    public function allResto(){
+        $resto = restaurent::GET();
+        return view('resto.allResto')->with("resto",$resto);
+    }
 }

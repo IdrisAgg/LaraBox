@@ -62,4 +62,31 @@ class OrderController extends Controller
     {
         //
     }
+
+
+
+    public function createOrder(Request $request){
+        $this->validate($request,[
+            'nom'=>'required',
+            'numero'=>'required',
+            'adresse'=>'required',
+            'ville'=>'required',
+        ]);
+
+        $order = new order();
+
+        $order->nom = $request->input('nom');
+        $order->numéro = $request->input('numero');
+        $order->adresse = $request->input('adresse');
+        $order->ville = $request->input('ville');
+        $order->save();
+
+        return redirect('/');
+    }
+
+    public function formOrder(){
+        return view('resto.formResto');
+    }
+
+
 }

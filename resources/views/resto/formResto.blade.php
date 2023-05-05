@@ -7,25 +7,42 @@ créer resto
 <form action="/createResto" method="POST">
                 @csrf
                 <div class="d-flex justify-content-center ">
-                    <label class="form-label mx-2" for="nom">nom</label>
+                    <label class="form-label mx-2" for="">nom</label>
                 </div>
                 <div class="d-flex justify-content-center">
                     <input class="form-control w-25"  type="text" id="nom" name="nom">
                 </div>
+
                 <div class="d-flex justify-content-center mt-3">
-                    <label class="form-label mx-2" for="nom">numéro</label>
+                    <label class="form-label mx-2" for="">horaire début</label>
+                </div>
+                <div class="d-flex justify-content-center ">
+                    <input class="form-control w-25"  type="time"  name="horaireStart">
+                </div>
+
+                <div class="d-flex justify-content-center mt-3">
+                    <label class="form-label mx-2" for="">horaire fin</label>
+                </div>
+                <div class="d-flex justify-content-center ">
+                    <input class="form-control w-25"  type="time"  name="horaireEnd">
+                </div>
+
+                <div class="d-flex justify-content-center mt-3">
+                    <label class="form-label mx-2" for="">numéro</label>
                 </div>
                 <div class="d-flex justify-content-center mb-3">
                     <input class="form-control w-25"  type="text"  name="numero">
                 </div>
+
                 <div class="d-flex justify-content-center">
-                    <label class="form-label mx-2" for="nom">adresse</label>
+                    <label class="form-label mx-2" for="">adresse</label>
                 </div>
                 <div class="d-flex justify-content-center">
                     <input class="form-control w-25"  type="text"  name="adresse">
                 </div>
+
                 <div class="d-flex justify-content-center mt-3">
-                    <label class="form-label mx-2" for="nom">ville</label>
+                    <label class="form-label mx-2" for="">ville</label>
                 </div>
                 <div class="d-flex justify-content-center ">
                     <input class="form-control w-25"  type="text"  name="ville">
