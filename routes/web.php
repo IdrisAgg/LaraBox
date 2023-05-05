@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-// mes routes
+// --------------------mes routes--------------------
 
 Route::get('/', function () {
     return view('index');
@@ -41,6 +41,7 @@ Route::get('createResto',[RestaurentController::class,'formResto']);
 Route::post('createResto',[RestaurentController::class,'createResto']);
 
 Route::get('afficheAllResto',[RestaurentController::class,'allResto']);
+Route::get('afficheUnResto/{id}',[RestaurentController::class,'unResto']);
 
 
-// mes routes
+// --------------------mes routes--------------------

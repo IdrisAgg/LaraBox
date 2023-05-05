@@ -30,6 +30,8 @@ class DatabaseSeeder extends Seeder
             'adresse' => '26 rue Mazarine',
             'horaireDebut' => '12:30',
             'horaireFin' => '23:30',
+            'numero'=> '01.01.01.01.01',
+
         ]);
 
         restaurent::create([
@@ -38,6 +40,7 @@ class DatabaseSeeder extends Seeder
             'adresse' => '12, rue de Richelieu ',
             'horaireDebut' => '12:30',
             'horaireFin' => '23:30',
+            'numero'=> '01.01.01.01.01',
         ]);
 
         restaurent::create([
@@ -46,6 +49,7 @@ class DatabaseSeeder extends Seeder
             'adresse' => '28 rue Saint-Anne',
             'horaireDebut' => '12:30',
             'horaireFin' => '22:30',
+            'numero'=> '01.01.01.01.01',
         ]);
 
         restaurent::create([
@@ -54,6 +58,7 @@ class DatabaseSeeder extends Seeder
             'adresse' => '76 Rue Jean-Jacques Rousseau',
             'horaireDebut' => '12:00',
             'horaireFin' => '22:00',
+            'numero'=> '01.01.01.01.01',
         ]);
 
     }

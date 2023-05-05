@@ -13,7 +13,7 @@ foreach($resto as $rest) {
   <div class="card-body">
     <h5 class="card-title"> <?= $rest->nom ?> </h5>
     <p class="card-text"> <?= $rest->horaireDebut ?> - <?= $rest->horaireFin ?> </p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="/afficheUnResto/{{$rest->id}}" class="btn btn-primary">plus d'info ...</a>
   </div>
 </div>
 

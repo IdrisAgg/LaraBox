@@ -91,4 +91,9 @@ class RestaurentController extends Controller
         $resto = restaurent::GET();
         return view('resto.allResto')->with("resto",$resto);
     }
+
+    public function unResto($id){
+        $unResto = restaurent::find($id);
+        return view('resto.unResto')->with("unResto",$unResto);
+    }
 }
