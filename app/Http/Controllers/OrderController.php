@@ -76,7 +76,7 @@ class OrderController extends Controller
         $this->validate($request,[
             'nom'=>'required',
             'restaurent'=>'required',
-            'userId'=>'required',
+            //'userId'=>'required',
             'date'=>'required',           
          
         ]);
@@ -85,7 +85,7 @@ class OrderController extends Controller
 
         $order->name = $request->input('nom');
         $order->resto_id = $request->input('restaurent');
-        $order->user_id = $request->input('userId');
+        //$order->user_id = $request->input('userId');
         $order->date = $request->input('date');
         $order->save();
 
