@@ -3,6 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\order;
+use App\Models\restaurent;
+use App\Models\User;
+
+
+
+
+
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -68,24 +75,31 @@ class OrderController extends Controller
     public function createOrder(Request $request){
         $this->validate($request,[
             'nom'=>'required',
-            'numero'=>'required',
-            'adresse'=>'required',
-            'ville'=>'required',
+            'restaurent'=>'required',
+            'userId'=>'required',
+            'date'=>'required',           
+         
         ]);
 
         $order = new order();
 
-        $order->nom = $request->input('nom');
-        $order->numéro = $request->input('numero');
-        $order->adresse = $request->input('adresse');
-        $order->ville = $request->input('ville');
+        $order->name = $request->input('nom');
+        $order->resto_id = $request->input('restaurent');
+        $order->user_id = $request->input('userId');
+        $order->date = $request->input('date');
         $order->save();
 
         return redirect('/');
     }
 
     public function formOrder(){
-        return view('resto.formResto');
+        $resto = restaurent::GET();
+        return view('order.formOrder')->with('resto',$resto);
+    }
+
+    public function allOrder(){
+        $orders = order::GET();
+        return view('order.allOrder')->with('orders',$orders);
     }
 
 

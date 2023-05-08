@@ -25,6 +25,7 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item " href="/createResto">Ajouter un restaurent</a></li>
             <li><a class="dropdown-item" href="/createOrder">Ajouter une Order</a></li>
+            <li><a class="dropdown-item" href="/allOrder">Liste des Order</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>

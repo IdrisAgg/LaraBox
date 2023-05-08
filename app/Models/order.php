@@ -13,4 +13,8 @@ class order extends Model
     public function resto(): BelongsTo{
         return $this-> belongsTo(restaurent::class,"resto_id");
     }
+
+    public function user(): BelongsTo{
+        return $this-> belongsTo(User::class,"user_id");
+    }
 }

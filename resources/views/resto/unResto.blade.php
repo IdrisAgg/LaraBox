@@ -15,7 +15,7 @@
     <p class="card-text"><strong>Ville: </strong>{{ $unResto->ville }} </p>
     <p class="card-text"><strong>Téléphone: </strong>{{ $unResto->numero }} </p>
 
-    <a href="#" class="btn btn-primary">réserver</a>
+    <a href="/createOrder" class="btn btn-primary">réserver</a>
   </div>
 </div>
 

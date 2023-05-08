@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RestaurentController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,11 +38,19 @@ Route::get('/', function () {
     return view('index');
 });
 
+// ----------RESTO----------
 Route::get('createResto',[RestaurentController::class,'formResto']);
 Route::post('createResto',[RestaurentController::class,'createResto']);
 
 Route::get('afficheAllResto',[RestaurentController::class,'allResto']);
 Route::get('afficheUnResto/{id}',[RestaurentController::class,'unResto']);
+// ----------RESTO----------
+
+// ----------ORDER----------
+Route::get('createOrder',[OrderController::class,'formOrder']);
+Route::post('createOrder',[OrderController::class,'createOrder']);
+Route::get('allOrder',[OrderController::class,'allOrder']);
 
 
-// --------------------mes routes--------------------
+
+// ----------ORDER----------
