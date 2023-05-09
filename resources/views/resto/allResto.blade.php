@@ -14,6 +14,8 @@ foreach($resto as $rest) {
     <h5 class="card-title"> <?= $rest->nom ?> </h5>
     <p class="card-text"> <?= $rest->horaireDebut ?> - <?= $rest->horaireFin ?> </p>
     <a href="/afficheUnResto/{{$rest->id}}" class="btn btn-outline-secondary">plus d'info ...</a>
+    <a href="/deleteResto/{{$rest->id}}" class="btn btn-outline-danger">Supprimer</a>
+
   </div>
 </div>
 

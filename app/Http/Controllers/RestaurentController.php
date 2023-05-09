@@ -66,7 +66,7 @@ class RestaurentController extends Controller
     public function createResto(Request $request){
         $this->validate($request,[
             'nom'=>'required',
-            
+
         ]);
 
         $resto = new restaurent();
@@ -85,7 +85,7 @@ class RestaurentController extends Controller
     public function formResto(){
         return view('resto.formResto');
     }
-   
+
 
     public function allResto(){
         $resto = restaurent::GET();
@@ -96,4 +96,11 @@ class RestaurentController extends Controller
         $unResto = restaurent::find($id);
         return view('resto.unResto')->with("unResto",$unResto);
     }
+
+    public function suppResto($id){
+        $unResto = restaurent::find($id);
+        $unResto->delete();
+        return redirect('/afficheAllResto');
+    }
+
 }
