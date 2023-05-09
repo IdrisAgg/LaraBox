@@ -29,31 +29,31 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::get('/', function () {return view('index');});
+
+    // ----------RESTO MIDDLEWARE----------
+    Route::get('createResto',[RestaurentController::class,'formResto']);
+    Route::post('createResto',[RestaurentController::class,'createResto']);
+    Route::get('deleteResto/{id}',[RestaurentController::class,'suppResto']);
+    // ----------RESTO MIDDLEWARE----------
+
+    // ----------ORDER----------
+    Route::get('createOrder',[OrderController::class,'formOrder']);
+    Route::post('createOrder',[OrderController::class,'createOrder']);
+    Route::get('allOrder',[OrderController::class,'allOrder']);
+    Route::get('deleteOrder/{id}',[OrderController::class,'suppOrder']);
+    // ----------ORDER----------
 });
 
 require __DIR__.'/auth.php';
 
 // --------------------mes routes--------------------
+Route::get('/', function () {return view('index');});
 
-
-
-// ----------RESTO----------
-Route::get('createResto',[RestaurentController::class,'formResto']);
-Route::post('createResto',[RestaurentController::class,'createResto']);
-
+// ----------RESTO ----------
 Route::get('afficheAllResto',[RestaurentController::class,'allResto']);
 Route::get('afficheUnResto/{id}',[RestaurentController::class,'unResto']);
-Route::get('deleteResto/{id}',[RestaurentController::class,'suppResto']);
-
-// ----------RESTO----------
-
-// ----------ORDER----------
-Route::get('createOrder',[OrderController::class,'formOrder']);
-Route::post('createOrder',[OrderController::class,'createOrder']);
-Route::get('allOrder',[OrderController::class,'allOrder']);
-Route::get('deleteOrder/{id}',[OrderController::class,'suppOrder']);
+// ----------RESTO ----------
 
 
 
-// ----------ORDER----------
+
