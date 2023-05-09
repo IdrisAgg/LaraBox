@@ -4,7 +4,7 @@
 <div class="text-center"><h1>Liste restaurents :</h1></div>
 <div class=" text-center my-5">
 
-<?php 
+<?php
 foreach($resto as $rest) {
 ?>
 
@@ -13,14 +13,15 @@ foreach($resto as $rest) {
   <div class="card-body">
     <h5 class="card-title"> <?= $rest->nom ?> </h5>
     <p class="card-text"> <?= $rest->horaireDebut ?> - <?= $rest->horaireFin ?> </p>
-    <a href="/afficheUnResto/{{$rest->id}}" class="btn btn-primary">plus d'info ...</a>
+    <a href="/afficheUnResto/{{$rest->id}}" class="btn btn-outline-secondary">plus d'info ...</a>
   </div>
 </div>
-
 
 
 <?php
 }
 ?>
 </div>
+
+
 @endsection

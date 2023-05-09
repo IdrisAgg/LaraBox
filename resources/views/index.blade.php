@@ -1,8 +1,5 @@
 @extends('layout.app')
 
 @section('content')
-<div class="">
-
-oui
-</div>
+<div class="text-center"><h3>ACCUEIL TODO</h3></div>
 @endsection
