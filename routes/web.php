@@ -52,6 +52,7 @@ Route::get('deleteResto/{id}',[RestaurentController::class,'suppResto']);
 Route::get('createOrder',[OrderController::class,'formOrder']);
 Route::post('createOrder',[OrderController::class,'createOrder']);
 Route::get('allOrder',[OrderController::class,'allOrder']);
+Route::get('deleteOrder/{id}',[OrderController::class,'suppOrder']);
 
 
 

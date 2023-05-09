@@ -33,8 +33,10 @@ créer resto
                     <input class="form-control w-25"  type="date" id="nom" name="date">
                 </div>
 
-                           
-                
+                <div class="d-flex justify-content-center mt-3">
+                    <input class="form-control w-25"  type="hidden" id="nom" name="userId" value="{{Auth::user()->id}}">
+                </div>
+
                 <div class="d-flex justify-content-center mt-2">
                     <button type="submit" class="btn btn-primary px-4 mt-2">Ajouter</button>
                 </div>

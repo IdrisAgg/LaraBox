@@ -18,7 +18,7 @@ créer resto
                     <div class="card-body">
                         <h5 class="card-title"><strong>Réservation du restaurent: </strong> {{ $order->resto->nom }}</h5>
                         <p class="card-text"><strong>adresse du restaurent: </strong>{{ $order->resto->adresse }}</p>
-                        <a href="#" class="btn btn-outline-danger">Supprimer</a>
+                        <a href="deleteOrder/{{$order->id}}" class="btn btn-outline-danger">Supprimer</a>
                     </div>
                 </div>
             </div>

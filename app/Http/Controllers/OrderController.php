@@ -76,16 +76,16 @@ class OrderController extends Controller
         $this->validate($request,[
             'nom'=>'required',
             'restaurent'=>'required',
-            //'userId'=>'required',
-            'date'=>'required',           
-         
+            'userId'=>'required',
+            'date'=>'required',
+
         ]);
 
         $order = new order();
 
         $order->name = $request->input('nom');
         $order->resto_id = $request->input('restaurent');
-        //$order->user_id = $request->input('userId');
+        $order->user_id = $request->input('userId');
         $order->date = $request->input('date');
         $order->save();
 
@@ -100,6 +100,12 @@ class OrderController extends Controller
     public function allOrder(){
         $orders = order::GET();
         return view('order.allOrder')->with('orders',$orders);
+    }
+
+    public function suppOrder($id){
+        $uneResa = order::find($id);
+        $uneResa->delete();
+        return redirect('/allOrder');
     }
 
 
