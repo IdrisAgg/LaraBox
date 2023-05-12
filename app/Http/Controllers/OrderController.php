@@ -78,6 +78,7 @@ class OrderController extends Controller
             'restaurent'=>'required',
             'userId'=>'required',
             'date'=>'required',
+            'horaire'=>'required',
 
         ]);
 
@@ -87,6 +88,8 @@ class OrderController extends Controller
         $order->resto_id = $request->input('restaurent');
         $order->user_id = $request->input('userId');
         $order->date = $request->input('date');
+        $order->horaire = $request->input('horaire');
+
         $order->save();
 
         return redirect('/');

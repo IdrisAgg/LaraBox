@@ -13,4 +13,8 @@ class Restaurent extends Model
     public function orders(): HasMany{
         return $this-> hasMany(Order::class,"resto_id");
     }
+
+    public function selection(): HasMany{
+        return $this-> hasMany(Selection::class,"selection_id");
+    }
 }

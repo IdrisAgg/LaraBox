@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Restaurent;
 use App\Models\selection;
+use App\Models\Selection as ModelsSelection;
 use Illuminate\Http\Request;
 
 class SelectionController extends Controller
@@ -62,4 +64,33 @@ class SelectionController extends Controller
     {
         //
     }
+
+    public function formSelection($id){
+        $resto = Restaurent::find($id);
+        return view('selection.formSelection')->with('resto',$resto);
+    }
+
+
+    public function createSelection(Request $request){
+        $this->validate($request,[
+            'nom'=>'required',
+            'resto_id'=>'required',
+        ]);
+
+        $selection = new Selection();
+
+        $selection->name = $request->input('nom');
+        $selection->resto_id = $request->input('resto_id');
+        $selection->save();
+
+
+        return redirect('/');
+    }
+
+
+    public function allSelection(){
+        $selection = Selection::GET();
+        return view('selection.allSelection ')->with('selection',$selection);
+    }
+
 }

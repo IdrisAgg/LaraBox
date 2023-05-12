@@ -16,8 +16,11 @@ créer resto
                         <h5 class="card-header w-25">{{ $order->date}}</h5>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title"><strong>Réservation du restaurent: </strong> {{ $order->resto->nom }}</h5>
-                        <p class="card-text"><strong>adresse du restaurent: </strong>{{ $order->resto->adresse }}</p>
+                        <div class="d-flex">
+                        <h5 class="card-title underline mr-1">Réservation du restaurent: </h5> <span> {{ $order->resto->nom }} - {{ $order->resto->adresse }}</span>
+                    </div>
+                        <p class="card-text"><strong class="">Horaire: </strong>{{ $order->horaire }}</p>
+                        <p class="card-text"><strong class="">nom du client: </strong>{{Auth::user()->name}}</p>
                         <a href="deleteOrder/{{$order->id}}" class="btn btn-outline-danger">Supprimer</a>
                     </div>
                 </div>

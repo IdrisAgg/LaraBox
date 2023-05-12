@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RestaurentController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\SelectionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -42,6 +43,12 @@ Route::middleware('auth')->group(function () {
     Route::get('allOrder',[OrderController::class,'allOrder']);
     Route::get('deleteOrder/{id}',[OrderController::class,'suppOrder']);
     // ----------ORDER----------
+
+    // ---------- SELECTION ----------
+    Route::get('createSelection/{id}',[SelectionController::class,'formSelection']);
+    Route::post('createSelection/{id}',[SelectionController::class,'createSelection']);
+    Route::get('allSelection',[SelectionController::class,'allSelection']);
+// ---------- SELECTION ----------
 });
 
 require __DIR__.'/auth.php';
@@ -53,6 +60,12 @@ Route::get('/', function () {return view('index');});
 Route::get('afficheAllResto',[RestaurentController::class,'allResto']);
 Route::get('afficheUnResto/{id}',[RestaurentController::class,'unResto']);
 // ----------RESTO ----------
+
+
+
+
+
+// --------------------mes routes--------------------
 
 
 
