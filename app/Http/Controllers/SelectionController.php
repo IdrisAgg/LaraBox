@@ -93,4 +93,10 @@ class SelectionController extends Controller
         return view('selection.allSelection ')->with('selection',$selection);
     }
 
+    public function suppSelection($id){
+        $uneSelection = Selection::find($id);
+        $uneSelection->delete();
+        return redirect('/allSelection');
+    }
+
 }

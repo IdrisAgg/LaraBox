@@ -10,9 +10,10 @@ créer resto
 foreach($selection as $select)
 {
 ?>
-<p><?= $select->name ?> </p>
+<p><?= $select->name ?> <a href="suppSelection/{{$select->id}}" class="btn btn-primary">Supp</a></p>
 
 <?php
 }
 ?>
 </div>
+@endsection

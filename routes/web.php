@@ -48,7 +48,8 @@ Route::middleware('auth')->group(function () {
     Route::get('createSelection/{id}',[SelectionController::class,'formSelection']);
     Route::post('createSelection/{id}',[SelectionController::class,'createSelection']);
     Route::get('allSelection',[SelectionController::class,'allSelection']);
-// ---------- SELECTION ----------
+    Route::get('suppSelection/{id}',[SelectionController::class,'suppSelection']);
+    // ---------- SELECTION ----------
 });
 
 require __DIR__.'/auth.php';
