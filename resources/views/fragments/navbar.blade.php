@@ -21,7 +21,7 @@
           {{-- @if (Auth::user()->isAdmin == '1' || Auth::user()->isAdmin == null) --}}
           <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            ADMIN ACTIONS
           </a>
                <ul class="dropdown-menu">
             <li><a class="dropdown-item " href="/createResto">Ajouter un restaurent</a></li>
@@ -29,8 +29,9 @@
             <li><a class="dropdown-item" href="/allOrder">Liste des Order</a></li>
             <li><a class="dropdown-item" href="/createSelection">Ajouter Selection</a></li>
             <li><a class="dropdown-item" href="/allSelection">All Selection</a></li>
+            <li><a class="dropdown-item" href="/adminAllResto">adminAllResto</a></li>
 
-
+            
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>

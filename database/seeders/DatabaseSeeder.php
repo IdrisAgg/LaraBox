@@ -69,5 +69,32 @@ class DatabaseSeeder extends Seeder
             'numero'=> '01.01.01.01.01',
         ]);
 
+        restaurent::create([
+            'nom' => 'Umami-Ramen',
+            'ville' => 'Bordeaux',
+            'adresse' => '8 Pl. Fernand Lafargue',
+            'horaireDebut' => '12:00',
+            'horaireFin' => '22:30',
+            'numero'=> '01.01.01.01.01',
+        ]);
+
+        restaurent::create([
+            'nom' => 'Noodle-Bar',
+            'ville' => 'Bordeaux',
+            'adresse' => '37 Rue Saint-Rémi',
+            'horaireDebut' => '11:30',
+            'horaireFin' => '23:00',
+            'numero'=> '01.01.01.01.01',
+        ]);
+
+        restaurent::create([
+            'nom' => 'Ebisu',
+            'ville' => 'Bordeaux',
+            'adresse' => '265 Rue Sainte-Catherine',
+            'horaireDebut' => '11:30',
+            'horaireFin' => '22:30',
+            'numero'=> '01.01.01.01.01',
+        ]);
+
     }
 }

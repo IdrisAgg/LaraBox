@@ -100,7 +100,12 @@ class RestaurentController extends Controller
     public function suppResto($id){
         $unResto = restaurent::find($id);
         $unResto->delete();
-        return redirect('/afficheAllResto');
+        return redirect('/adminAllResto');
     }
 
+    
+    public function adminAllResto(){
+        $resto = restaurent::GET();
+        return view('resto.adminAllResto')->with("resto",$resto);
+    }
 }

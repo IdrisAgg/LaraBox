@@ -35,21 +35,22 @@ Route::middleware('auth')->group(function () {
     Route::get('createResto',[RestaurentController::class,'formResto']);
     Route::post('createResto',[RestaurentController::class,'createResto']);
     Route::get('deleteResto/{id}',[RestaurentController::class,'suppResto']);
+    Route::get('adminAllResto',[RestaurentController::class,'adminAllResto']);
     // ----------RESTO MIDDLEWARE----------
 
-    // ----------ORDER----------
+    // ----------ORDER MIDDLEWARE----------
     Route::get('createOrder',[OrderController::class,'formOrder']);
     Route::post('createOrder',[OrderController::class,'createOrder']);
     Route::get('allOrder',[OrderController::class,'allOrder']);
     Route::get('deleteOrder/{id}',[OrderController::class,'suppOrder']);
-    // ----------ORDER----------
+    // ----------ORDER MIDDLEWARE----------
 
-    // ---------- SELECTION ----------
+    // ---------- SELECTION MIDDLEWARE----------
     Route::get('createSelection/{id}',[SelectionController::class,'formSelection']);
     Route::post('createSelection/{id}',[SelectionController::class,'createSelection']);
     Route::get('allSelection',[SelectionController::class,'allSelection']);
     Route::get('suppSelection/{id}',[SelectionController::class,'suppSelection']);
-    // ---------- SELECTION ----------
+    // ---------- SELECTION MIDDLEWARE----------
 });
 
 require __DIR__.'/auth.php';
