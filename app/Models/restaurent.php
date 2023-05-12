@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class restaurent extends Model
+class Restaurent extends Model
 {
     use HasFactory;
 
     public function orders(): HasMany{
-        return $this-> hasMany(order::class,"resto_id");
+        return $this-> hasMany(Order::class,"resto_id");
     }
 }
