@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Restaurent;
-use App\Models\selection;
-use App\Models\Selection as ModelsSelection;
+use App\Models\Selection;
 use Illuminate\Http\Request;
 
 class SelectionController extends Controller
