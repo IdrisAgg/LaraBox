@@ -97,6 +97,7 @@ class SelectionController extends Controller
         $uneSelection = Selection::find($id);
         $uneSelection->delete();
         return redirect('/allSelection');
+
     }
 
 }
