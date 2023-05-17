@@ -105,7 +105,7 @@ class DatabaseSeeder extends Seeder
             'horaireDebut' => '11:30',
             'horaireFin' => '22:30',
             'numero'=> '01.01.01.01.01',
-            'image'=> '/images/ebisuLogo.jpg',
+            'image'=> '/images/ebisu.jpg',
 
         ]);
 
