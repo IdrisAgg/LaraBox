@@ -89,7 +89,8 @@ class SelectionController extends Controller
 
     public function allSelection(){
         $selection = Selection::GET();
-        return view('selection.allSelection ')->with('selection',$selection);
+        $resto = Restaurent::GET();
+        return view('selection.allSelection ')->with('selection',$selection)->with('resto',$resto);
     }
 
     public function suppSelection($id){

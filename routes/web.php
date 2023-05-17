@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RestaurentController;
 use App\Http\Controllers\OrderController;
@@ -51,6 +52,17 @@ Route::middleware('auth')->group(function () {
     Route::get('allSelection',[SelectionController::class,'allSelection']);
     Route::get('suppSelection/{id}',[SelectionController::class,'suppSelection']);
     // ---------- SELECTION MIDDLEWARE----------
+
+    // ---------- ITEMS MIDDLEWARE----------
+    Route::get('createItem',[ItemController::class,'formItems']);
+    Route::post('createItem',[ItemController::class,'createItem']);
+    Route::get('allItems',[ItemController::class,'allItems']);
+    // Route::get('formItems',[ItemController::class,'formItems']);
+
+    Route::post('createSelection/{id}',[SelectionController::class,'createSelection']);
+    Route::get('allSelection',[SelectionController::class,'allSelection']);
+    Route::get('suppSelection/{id}',[SelectionController::class,'suppSelection']);
+    // ---------- ITEMS MIDDLEWARE----------
 });
 
 require __DIR__.'/auth.php';

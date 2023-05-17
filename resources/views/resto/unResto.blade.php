@@ -11,7 +11,7 @@
             <p class="card-text"><strong></strong>{{ $unResto->horaireDebut }} - {{ $unResto->horaireFin }} </p>
             <p class="card-text"><strong></strong>{{ $unResto->adresse }} - {{ $unResto->ville }}</p>
             <p class="card-text"><strong></strong>{{-- {{ $unResto->numero }} --}} 06.10.03.56.25</p>
-                       <p class="card-text"><strong></strong> </p>
+            <p class="card-text"><strong></strong> </p>
 
             {{-- @if (Auth::user()->isAdmin == null)
             <div class="text-center mt-">
@@ -23,14 +23,14 @@
 
 
             <div class=" d-flex justify-content-center">
-                <div class="bg-secondary card mx-3  col-xs-5 col-sm-5 col-md-5 col-lg-4" >
+                <div class="card mx-3  col-xs-5 col-sm-5 col-md-5 col-lg-4" >
                     <div class="card-body ">
                         <h5 class="card-title text-center ">MENU</h5>
                         <hr>
                         <p class="card-text text-center">description descriptiondescriptiondescription</p>
                         {{-- @if (Auth::user()->isAdmin == null) --}}
                         <div class="text-center mt-">
-                            <a href="/createOrder" class="btn btn-outline-info ">réserver</a>
+                            <a href="/createSelection/{{$unResto->id}}" class="btn btn-outline-info ">réserver</a>
                         </div>
                         {{-- @endif --}}
                     </div>
@@ -49,8 +49,8 @@
                 </div>
             </div>
 
-            
-    
+
+
         <div class=" d-flex justify-content-center">
             <div class=" card mx-3 mt-3 col-xs-12 col-sm-5 col-md-5 col-lg-4" >
                 <div class="card-body">
@@ -65,21 +65,21 @@
                 </div>
             </div>
 
-            <div class="card bg-secondary mx-1 mt-3 col-xs-12 col-sm-5 col-md-5 col-lg-4" >
+            <div class="card mx-1 mt-3 col-xs-12 col-sm-5 col-md-5 col-lg-4" >
                 <div class="card-body">
                     <h5 class="card-title text-center">TITRE</h5>
                     <hr>
                     <p class="card-text text-center">descriptiondescriptiondescriptiondescription</p>
                     {{-- @if (Auth::user()->isAdmin == null) --}}
                     <div class="text-center mt-">
-                        <a href="/createOrder" class="btn btn-outline-info ">réserver</a>
+                        <a href="/allSelection" class="btn btn-outline-info ">réserver</a>
                     </div>
                     {{-- @endif --}}
                 </div>
             </div>
         </div>
 
-       
+
 
 
 

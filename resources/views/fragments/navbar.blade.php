@@ -23,18 +23,18 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             ADMIN ACTIONS
           </a>
-               <ul class="dropdown-menu">
-            <li><a class="dropdown-item " href="/createResto">Ajouter un restaurent</a></li>
-            <li><a class="dropdown-item" href="/createOrder">Ajouter une Order</a></li>
-            <li><a class="dropdown-item" href="/allOrder">Liste des Order</a></li>
-            <li><a class="dropdown-item" href="/createSelection">Ajouter Selection</a></li>
-            <li><a class="dropdown-item" href="/allSelection">All Selection</a></li>
-            <li><a class="dropdown-item" href="/adminAllResto">adminAllResto</a></li>
-
-            
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item " href="/createResto">Ajouter un restaurent</a></li>
+                <li><a class="dropdown-item" href="/createOrder">Ajouter une Order</a></li>
+                <li><a class="dropdown-item" href="/allOrder">Liste des Order</a></li>
+                <li><a class="dropdown-item" href="/createSelection">Ajouter Selection</a></li>
+                <li><a class="dropdown-item" href="/allSelection">All Selection</a></li>
+                <li><a class="dropdown-item" href="/adminAllResto">adminAllResto</a></li>
+                <li><a class="dropdown-item" href="/createItem">createItem</a></li>
+                <li><a class="dropdown-item" href="/allItems">allItems</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
         </li>
         if
           {{-- @endif --}}
@@ -48,6 +48,7 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
+
     </div>
   </div>
 </nav>
