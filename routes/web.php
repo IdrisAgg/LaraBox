@@ -35,6 +35,8 @@ Route::middleware('auth')->group(function () {
     // ----------RESTO MIDDLEWARE----------
     Route::get('createResto',[RestaurentController::class,'formResto']);
     Route::post('createResto',[RestaurentController::class,'createResto']);
+    Route::get('modifResto/{id}',[RestaurentController::class,'formModif']);
+    Route::post('modifResto/{id}',[RestaurentController::class,'modifResto']);
     Route::get('deleteResto/{id}',[RestaurentController::class,'suppResto']);
     Route::get('adminAllResto',[RestaurentController::class,'adminAllResto']);
     // ----------RESTO MIDDLEWARE----------

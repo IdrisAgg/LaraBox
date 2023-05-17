@@ -39,6 +39,8 @@ class DatabaseSeeder extends Seeder
             'horaireDebut' => '12:30',
             'horaireFin' => '23:30',
             'numero'=> '01.01.01.01.01',
+            'image'=> '/images/Kodawari_Ramen_Yaokocho.jpg',
+
 
         ]);
 
@@ -49,6 +51,8 @@ class DatabaseSeeder extends Seeder
             'horaireDebut' => '12:30',
             'horaireFin' => '23:30',
             'numero'=> '01.01.01.01.01',
+            'image'=> '/images/kodawaro_ramen_tsujiki.jpg',
+
         ]);
 
         restaurent::create([
@@ -58,6 +62,8 @@ class DatabaseSeeder extends Seeder
             'horaireDebut' => '12:30',
             'horaireFin' => '22:30',
             'numero'=> '01.01.01.01.01',
+            'image'=> '/images/Kadoya.jpg',
+
         ]);
 
         restaurent::create([
@@ -67,6 +73,7 @@ class DatabaseSeeder extends Seeder
             'horaireDebut' => '12:00',
             'horaireFin' => '22:00',
             'numero'=> '01.01.01.01.01',
+            'image'=> '/images/ippudo.jpg',
         ]);
 
         restaurent::create([
@@ -76,6 +83,8 @@ class DatabaseSeeder extends Seeder
             'horaireDebut' => '12:00',
             'horaireFin' => '22:30',
             'numero'=> '01.01.01.01.01',
+            'image'=> '/images/umami.jpg',
+
         ]);
 
         restaurent::create([
@@ -85,6 +94,8 @@ class DatabaseSeeder extends Seeder
             'horaireDebut' => '11:30',
             'horaireFin' => '23:00',
             'numero'=> '01.01.01.01.01',
+            'image'=> '/images/fufu.jpg',
+
         ]);
 
         restaurent::create([
@@ -94,6 +105,8 @@ class DatabaseSeeder extends Seeder
             'horaireDebut' => '11:30',
             'horaireFin' => '22:30',
             'numero'=> '01.01.01.01.01',
+            'image'=> '/images/ebisuLogo.jpg',
+
         ]);
 
     }

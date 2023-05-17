@@ -11,6 +11,7 @@ foreach($resto as $rest) {
 <div class="card mx-3 my-3 d-inline-block " style="width: 18rem;">
   {{-- <img src="..." class="card-img-top" alt=""> --}}
   <div class="card-body">
+    <img src="{{$rest->image}}" class="" alt="...">
     <h5 class="card-title "> <?= $rest->nom ?></h5>
     <hr>
     <p class="card-text"> <?= $rest->horaireDebut ?> - <?= $rest->horaireFin ?> </p>

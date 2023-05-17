@@ -51,7 +51,7 @@ créer resto
             </ul>
         </div>
     </div>
-    <div class="FORMULAIRE">
+    <div class="FORMULAIRE ">
         <form action="/createSelection/{{$resto->id}}" method="POST">
                 @csrf
 

@@ -66,9 +66,14 @@ class RestaurentController extends Controller
     public function createResto(Request $request){
         $this->validate($request,[
             'nom'=>'required',
+            'image'=>'image|mimes:png,jpg,jpeg.gif,svg',
+
 
         ]);
 
+        $img_name = time().'.'.$request->image->extension();
+        $request->image->move(public_path('lesImages'),$img_name);
+        $path = "/lesImages/".$img_name;
         $resto = new restaurent();
 
         $resto->nom = $request->input('nom');
@@ -77,6 +82,7 @@ class RestaurentController extends Controller
         $resto->numero = $request->input('numero');
         $resto->adresse = $request->input('adresse');
         $resto->ville = $request->input('ville');
+        $resto->image = $path;
         $resto->save();
 
         return redirect('/afficheAllResto');
@@ -103,9 +109,37 @@ class RestaurentController extends Controller
         return redirect('/adminAllResto');
     }
 
-    
+
     public function adminAllResto(){
         $resto = restaurent::GET();
         return view('resto.adminAllResto')->with("resto",$resto);
+    }
+
+    public function formModif($id){
+        $resto = restaurent::find($id);
+        return view('resto.formModif')->with("resto",$resto);
+    }
+
+    public function modifResto(Request $request)
+    {
+        $this->validate($request,[
+            'resto_id'=>'required'
+
+        ]);
+        $img_name = time().'.'.$request->image->extension();
+        $request->image->move(public_path('lesImages'),$img_name);
+        $path = "/lesImages/".$img_name;
+
+        $unResto = Restaurent::find($request->input('resto_id'));
+
+        $unResto->nom = $request->input('nom');
+        $unResto->horaireDebut = $request->input('horaireStart');
+        $unResto->horaireFin = $request->input('horaireEnd');
+        $unResto->numero = $request->input('numero');
+        $unResto->adresse = $request->input('adresse');
+        $unResto->ville = $request->input('ville');
+        $unResto->image = $path;
+        $unResto->save();
+        return redirect('/afficheAllResto')->with('message','Vos information ont été mis à jour !');
     }
 }
