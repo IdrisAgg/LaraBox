@@ -46,6 +46,38 @@ class RestaurentController extends Controller
         return redirect('/afficheAllResto');
     }
 
+
+    public function modifResto(Request $request)
+    {
+        // dd($request);
+        $this->validate($request,[
+            'resto_id'=>'required'
+
+        ]);
+        // $img_name = time().'.'.$request->image->extension();
+        // $request->image->move(public_path('lesImages'),$img_name);
+        // $path = "/lesImages/".$img_name;
+
+        $unResto = Restaurent::find($request->input('resto_id'));
+
+        if($image = $request->file('image')){
+            $destinationPath = 'lesImages/';
+            $profileImage = 'lesImages/'.time().'.'.$image->getClientOriginalExtension();
+            $image->move($destinationPath,$profileImage);
+            $input['image'] = $profileImage;
+            $unResto->image = $profileImage;
+        }
+
+        $unResto->nom = $request->input('nom');
+        $unResto->horaireDebut = $request->input('horaireStart');
+        $unResto->horaireFin = $request->input('horaireEnd');
+        $unResto->numero = $request->input('numero');
+        $unResto->adresse = $request->input('adresse');
+        $unResto->ville = $request->input('ville');
+        $unResto->update();
+        return redirect('/afficheAllResto')->with('message','Vos information ont été mis à jour !');
+    }
+
     /**
      * Display the specified resource.
      */
@@ -139,30 +171,5 @@ class RestaurentController extends Controller
         return view('resto.formModif')->with("resto",$resto);
     }
 
-    public function modifResto(Request $request)
-    {
-        $this->validate($request,[
-            'resto_id'=>'required'
-
-        ]);
-        // $img_name = time().'.'.$request->image->extension();
-        // $request->image->move(public_path('lesImages'),$img_name);
-        // $path = "/lesImages/".$img_name;
-
-        $unResto = Restaurent::find($request->input('resto_id'));
-
-        if($request->hasFile('profil_image'))
-        {
-            $file = $request;
-        }
-        $unResto->nom = $request->input('nom');
-        $unResto->horaireDebut = $request->input('horaireStart');
-        $unResto->horaireFin = $request->input('horaireEnd');
-        $unResto->numero = $request->input('numero');
-        $unResto->adresse = $request->input('adresse');
-        $unResto->ville = $request->input('ville');
-        // $unResto->image = $path;
-        $unResto->save();
-        return redirect('/afficheAllResto')->with('message','Vos information ont été mis à jour !');
-    }
+    
 }
