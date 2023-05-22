@@ -52,7 +52,7 @@ créer resto
                 </div>
 
                 <div class="d-flex justify-content-center mt-5">
-                    <input class="form-control w-25"  type="file" value="{{$resto->image}}" name="image">
+                    <input class="form-control w-25"  type="file" value="{{$resto->image}}" name="image" readonly>
                 </div>
                 <div class="">{{$resto->image}}</div>
 

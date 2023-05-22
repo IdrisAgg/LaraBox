@@ -17,4 +17,9 @@ class Restaurent extends Model
     public function selection(): HasMany{
         return $this-> hasMany(Selection::class,"selection_id");
     }
+
+    protected $fillable = [
+        'nom',
+        'image'
+    ];
 }

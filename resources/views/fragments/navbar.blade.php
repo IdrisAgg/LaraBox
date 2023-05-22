@@ -11,7 +11,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/afficheAllResto">Liste des restaurents</a>
+          <a class="nav-link" href="/afficheAllResto">Liste des restaurants</a>
         </li>
 
         <li class="nav-item">
@@ -24,7 +24,7 @@
             ADMIN ACTIONS
           </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item " href="/createResto">Ajouter un restaurent</a></li>
+                <li><a class="dropdown-item " href="/createResto">Ajouter un restaurant</a></li>
                 <li><a class="dropdown-item" href="/createOrder">Ajouter une Order</a></li>
                 <li><a class="dropdown-item" href="/allOrder">Liste des Order</a></li>
                 <li><a class="dropdown-item" href="/createSelection">Ajouter Selection</a></li>

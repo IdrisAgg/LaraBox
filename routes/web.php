@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RestaurentController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\SelectionController;
+use App\Models\Restaurent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,6 +34,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // ----------RESTO MIDDLEWARE----------
+    Route::resource('/restaurent',RestaurentController::class);
     Route::get('createResto',[RestaurentController::class,'formResto']);
     Route::post('createResto',[RestaurentController::class,'createResto']);
     Route::get('modifResto/{id}',[RestaurentController::class,'formModif']);

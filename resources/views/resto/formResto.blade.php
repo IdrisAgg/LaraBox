@@ -4,7 +4,7 @@ créer resto
 @endsection
 
 @section('content')
-<form action="/createResto" method="POST" enctype="multipart/form-data">
+<form action="{{route('restaurent.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="d-flex justify-content-center ">
                     <label class="form-label mx-2" for="">nom</label>
@@ -54,6 +54,10 @@ créer resto
 
                 <div class="d-flex justify-content-center mt-2">
                     <button type="submit" class="btn btn-primary px-4 mt-2">Ajouter</button>
+                </div>
+                <div class="">
+                    <img src="images/kodawaroLogo1.jpg" alt="">
+
                 </div>
             </form>
 @endsection

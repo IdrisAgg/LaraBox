@@ -19,72 +19,75 @@
             </div>
             @endif --}}
         </div>
+
 </div>
 
 
-            <div class=" d-flex justify-content-center">
-                <div class="card mx-3  col-xs-5 col-sm-5 col-md-5 col-lg-4" >
-                    <div class="card-body ">
-                        <h5 class="card-title text-center ">MENU</h5>
-                        <hr>
-                        <p class="card-text text-center">description descriptiondescriptiondescription</p>
-                        {{-- @if (Auth::user()->isAdmin == null) --}}
-                        <div class="text-center mt-">
-                            <a href="/createSelection/{{$unResto->id}}" class="btn btn-outline-info ">réserver</a>
-                        </div>
-                        {{-- @endif --}}
-                    </div>
+    <div class=" d-flex justify-content-center">
+        <div class="card mx-3  col-xs-5 col-sm-5 col-md-5 col-lg-4" >
+            <div class="card-body ">
+                <h5 class="card-title text-center ">MENU</h5>
+                <hr>
+                <p class="card-text text-center">Découvrez le menu composé de plats savoureusement concocté par notre chef venu tout droit d'une ville au Japon, je sais pas laquelle, ayant travaillé dans le restaurent tata au japon putain je suis drole </p>
+                {{-- @if (Auth::user()->isAdmin == null) --}}
+                <div class="text-center mt-">
+                    <a href="/createSelection/{{$unResto->id}}" class="btn btn-outline-info ">réserver</a>
                 </div>
-                <div class="card mx-1 col-xs-12 col-sm-5 col-md-5 col-lg-4" >
-                    <div class="card-body">
-                        <h5 class="card-title  text-center">TITRE </h5>
-                        <hr>
-                        <p class="card-text text-center">description descriptiondescriptiondescription</p>
-                        {{-- @if (Auth::user()->isAdmin == null) --}}
-                        <div class="text-center mt-">
-                            <a href="/createOrder" class="btn btn-outline-info ">réserver</a>
-                        </div>
-                        {{-- @endif --}}
-                    </div>
-                </div>
+                {{-- @endif --}}
             </div>
-
-
-
-        <div class=" d-flex justify-content-center">
-            <div class=" card mx-3 mt-3 col-xs-12 col-sm-5 col-md-5 col-lg-4" >
-                <div class="card-body">
-                    <h5 class="card-title  text-center">TITRE</h5>
-                    <hr>
-                    <p class="card-text text-center">descriptiondescriptiondescriptiondescription</p>
-                    {{-- @if (Auth::user()->isAdmin == null) --}}
-                    <div class="text-center mt-">
-                        <a href="/createOrder" class="btn btn-outline-info ">réserver</a>
-                    </div>
-                    {{-- @endif --}}
+        </div>
+        <div class="card mx-1 col-xs-12 col-sm-5 col-md-5 col-lg-4" >
+            <div class="card-body">
+                <h5 class="card-title  text-center">TITRE </h5>
+                <hr>
+                <p class="card-text text-center">descriptiondescriptiondescriptiondescription</p>
+                {{-- @if (Auth::user()->isAdmin == null) --}}
+                <div class="text-center mt-">
+                    <a href="/createOrder" class="btn btn-outline-info ">réserver</a>
                 </div>
+                {{-- @endif --}}
             </div>
+        </div>
+    </div>
 
-            <div class="card mx-1 mt-3 col-xs-12 col-sm-5 col-md-5 col-lg-4" >
-                <div class="card-body">
-                    <h5 class="card-title text-center">TITRE</h5>
-                    <hr>
-                    <p class="card-text text-center">descriptiondescriptiondescriptiondescription</p>
-                    {{-- @if (Auth::user()->isAdmin == null) --}}
-                    <div class="text-center mt-">
-                        <a href="/allSelection" class="btn btn-outline-info ">réserver</a>
-                    </div>
-                    {{-- @endif --}}
+
+
+    <div class=" d-flex justify-content-center">
+        <div class=" card mx-3 mt-3 col-xs-12 col-sm-5 col-md-5 col-lg-4" >
+            <div class="card-body">
+                <h5 class="card-title  text-center">TITRE</h5>
+                <hr>
+                <p class="card-text text-center">descriptiondescriptiondescriptiondescription</p>
+                {{-- @if (Auth::user()->isAdmin == null) --}}
+                <div class="text-center mt-">
+                    <a href="/createOrder" class="btn btn-outline-info ">réserver</a>
                 </div>
+                {{-- @endif --}}
             </div>
         </div>
 
+        <div class="card mx-1 mt-3 col-xs-12 col-sm-5 col-md-5 col-lg-4" >
+            <div class="card-body">
+                <h5 class="card-title text-center">TITRE</h5>
+                <hr>
+                <p class="card-text text-center">descriptiondescriptiondescriptiondescription</p>
+                {{-- @if (Auth::user()->isAdmin == null) --}}
+                <div class="text-center mt-">
+                    <a href="/allSelection" class="btn btn-outline-info ">réserver</a>
+                </div>
+                {{-- @endif --}}
+            </div>
+        </div>
+    </div>
 
 
 
 
 
 
+    <div class="d-flex justify-content-center my-5">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3187.4736983433386!2d-0.5748210547461355!3d44.83209745242083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5527c87620b8c1%3A0x3fa226b04d177247!2sEbisu!5e0!3m2!1sfr!2sfr!4v1684335526260!5m2!1sfr!2sfr" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
 
 
