@@ -11,7 +11,7 @@ foreach($resto as $rest) {
 <div class="card mx-3 my-3 d-inline-block " style="width: 18rem;">
   {{-- <img src="..." class="card-img-top" alt=""> --}}
   <div class="card-body ">
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center ">
     <img src="{{$rest->image}}" class="img-fluid" style="height: 150px" alt="...">
 </div>
     <h5 class="card-title "> <?= $rest->nom ?></h5>

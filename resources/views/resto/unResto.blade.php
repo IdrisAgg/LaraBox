@@ -1,7 +1,13 @@
 @extends('layout.app')
 
 @section('content')
-<div class="text-center"><h1>{{ $unResto->nom }}</h1></div>
+<div class="text-center">
+    <h1>{{ $unResto->nom }}</h1>
+</div>
+
+<div  style="" class="d-flex justify-content-center">
+<img  src="{{ $unResto->image }}" class="" alt="" width="400px">
+</div>
 <div class="d-flex justify-content-center my-5">
         <div class="card-body text-center">
             <h5 class="card-title">informations: </h5>

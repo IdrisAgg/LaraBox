@@ -62,7 +62,7 @@ class RestaurentController extends Controller
 
         if($image = $request->file('image')){
             $destinationPath = 'lesImages/';
-            $profileImage = 'lesImages/'.time().'.'.$image->getClientOriginalExtension();
+            $profileImage = '/lesImages/'.time().'.'.$image->getClientOriginalExtension();
             $image->move($destinationPath,$profileImage);
             $input['image'] = $profileImage;
             $unResto->image = $profileImage;
