@@ -24,7 +24,7 @@
             ADMIN ACTIONS
           </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item " href="/createResto">Ajouter un restaurant</a></li>
+                <li><a class="dropdown-item " href="{{route('restaurent.create')}}">Ajouter un restaurant</a></li>
                 <li><a class="dropdown-item" href="/createOrder">Ajouter une Order</a></li>
                 <li><a class="dropdown-item" href="/allOrder">Liste des Order</a></li>
                 <li><a class="dropdown-item" href="/createSelection">Ajouter Selection</a></li>

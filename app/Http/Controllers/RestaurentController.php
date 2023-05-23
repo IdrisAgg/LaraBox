@@ -20,7 +20,7 @@ class RestaurentController extends Controller
      */
     public function create()
     {
-        //
+        return view('restaurant.formResto');
     }
 
     /**
@@ -134,19 +134,19 @@ class RestaurentController extends Controller
     //     return redirect('/afficheAllResto');
     // }
 
-    public function formResto(){
-        return view('resto.formResto');
-    }
+    // public function formResto(){
+    //     return view('resto.formResto');
+    // }
 
 
     public function allResto(){
         $resto = restaurent::GET();
-        return view('resto.allResto')->with("resto",$resto);
+        return view('restaurant.allResto')->with("resto",$resto);
     }
 
     public function unResto($id){
         $unResto = restaurent::find($id);
-        return view('resto.unResto')->with("unResto",$unResto);
+        return view('restaurant.unResto')->with("unResto",$unResto);
     }
 
     public function suppResto($id){
@@ -158,12 +158,12 @@ class RestaurentController extends Controller
 
     public function adminAllResto(){
         $resto = restaurent::GET();
-        return view('resto.adminAllResto')->with("resto",$resto);
+        return view('restaurant.adminAllResto')->with("resto",$resto);
     }
 
     public function formModif($id){
         $resto = restaurent::find($id);
-        return view('resto.formModif')->with("resto",$resto);
+        return view('restaurant.formModif')->with("resto",$resto);
     }
 
 

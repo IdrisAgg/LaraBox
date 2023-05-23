@@ -20,7 +20,7 @@ class DessertController extends Controller
      */
     public function create()
     {
-        //
+        return view('dessert.formDessert');
     }
 
     /**
@@ -28,7 +28,10 @@ class DessertController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+
+        Dessert::create($input);
+        return redirect('/afficheAllResto');
     }
 
     /**

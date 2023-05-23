@@ -67,6 +67,11 @@ Route::middleware('auth')->group(function () {
     Route::get('allSelection',[SelectionController::class,'allSelection']);
     Route::get('suppSelection/{id}',[SelectionController::class,'suppSelection']);
     // ---------- ITEMS MIDDLEWARE----------
+
+    // ---------- DESSERT MIDDLEWARE----------
+    Route::resource('/desert', UserController::class);
+    // ---------- DESSERT MIDDLEWARE----------
+
 });
 
 require __DIR__.'/auth.php';
