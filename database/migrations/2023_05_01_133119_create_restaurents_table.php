@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string("numero")->nullable();
             $table->string("adresse")->nullable();
             $table->string("ville")->nullable();
+            $table->text("localisation")->nullable();
             $table->string("image")->nullable();
             $table->timestamps();
         });

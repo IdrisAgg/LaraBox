@@ -17,14 +17,14 @@ créer resto
                     <label class="form-label mx-2" for="">horaire début</label>
                 </div>
                 <div class="d-flex justify-content-center ">
-                    <input class="form-control w-25"  type="time"  name="horaireStart">
+                    <input class="form-control w-25"  type="time" name="horaireDebut">
                 </div>
 
                 <div class="d-flex justify-content-center mt-3">
                     <label class="form-label mx-2" for="">horaire fin</label>
                 </div>
                 <div class="d-flex justify-content-center ">
-                    <input class="form-control w-25"  type="time"  name="horaireEnd">
+                    <input class="form-control w-25"  type="time" name="horaireFin">
                 </div>
 
                 <div class="d-flex justify-content-center mt-3">
@@ -45,10 +45,14 @@ créer resto
                     <label class="form-label mx-2" for="">ville</label>
                 </div>
                 <div class="d-flex justify-content-center ">
-                    <input class="form-control w-25"  type="text"  name="ville">
+                    <input class="form-control w-25"  type="text" name="ville">
                 </div>
 
                 <div class="d-flex justify-content-center mt-5">
+                    <input class="form-control w-25"  type="text"  placeholder="Localisation" name="localisation">
+                </div>
+
+                <div class="d-flex justify-content-center mt-2">
                     <input class="form-control w-25"  type="file"  name="image">
                 </div>
 

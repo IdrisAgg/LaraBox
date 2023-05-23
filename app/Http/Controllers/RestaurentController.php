@@ -28,20 +28,14 @@ class RestaurentController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nom'=>'required',
-            'image'=>'image|mimes:png,jpg,jpeg.gif,svg',
-        ]);
 
         $input = $request->all();
-
         if($image = $request->file('image')){
             $destinationPath = 'lesImages/';
             $profileImage = 'lesImages/'.time().'.'.$image->getClientOriginalExtension();
             $image->move($destinationPath,$profileImage);
             $input['image'] = $profileImage;
         }
-
         Restaurent::create($input);
         return redirect('/afficheAllResto');
     }
@@ -74,6 +68,7 @@ class RestaurentController extends Controller
         $unResto->numero = $request->input('numero');
         $unResto->adresse = $request->input('adresse');
         $unResto->ville = $request->input('ville');
+        $unResto->localisation = $request->input('localisation');
         $unResto->update();
         return redirect('/afficheAllResto')->with('message','Vos information ont été mis à jour !');
     }
@@ -171,5 +166,5 @@ class RestaurentController extends Controller
         return view('resto.formModif')->with("resto",$resto);
     }
 
-    
+
 }

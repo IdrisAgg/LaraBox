@@ -27,7 +27,7 @@ créer resto
                     <label class="form-label mx-2" for="">horaire fin</label>
                 </div>
                 <div class="d-flex justify-content-center ">
-                    <input class="form-control w-25"  type="time" value="{{$resto->horaireFin}}"  name="horaireEnd">
+                    <input class="form-control w-25"  type="time" value="{{$resto->horaireFin}}" name="horaireEnd">
                 </div>
 
                 <div class="d-flex justify-content-center mt-3">
@@ -52,9 +52,12 @@ créer resto
                 </div>
 
                 <div class="d-flex justify-content-center mt-5">
+                    <input class="form-control w-25"  type="text" value="{{$resto->localisation}}" placeholder="localisation" name="localisation" >
+                </div>
+
+                <div class="d-flex justify-content-center mt-5">
                     <input class="form-control w-25"  type="file" value="{{$resto->image}}" name="image" readonly>
                 </div>
-                <div class="">{{$resto->image}}</div>
 
                 <div class="d-flex justify-content-center mt-2">
                     <button type="submit" class="btn btn-primary px-4 mt-2">Ajouter</button>

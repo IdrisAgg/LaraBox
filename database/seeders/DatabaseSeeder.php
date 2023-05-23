@@ -3,6 +3,10 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Entree;
+use App\Models\Item;
+use App\Models\Plat;
 use Illuminate\Database\Seeder;
 use App\Models\Restaurent;
 use App\Models\User;
@@ -114,6 +118,75 @@ class DatabaseSeeder extends Seeder
             'horaireFin' => '22:30',
             'numero'=> '01.01.01.01.01',
             'image'=> '/images/ebisu.jpg',
+
+        ]);
+
+        Plat::create([
+            'gras' => 'peu',
+            'lvlPiment' => 'faible',
+        ]);
+        Plat::create([
+            'gras' => 'beaucoup',
+            'lvlPiment' => 'faible',
+        ]);
+        Plat::create([
+            'gras' => 'peaucoup',
+            'lvlPiment' => 'très fort',
+        ]);
+        Plat::create([
+            'gras' => 'beaucoup',
+            'lvlPiment' => 'moyen',
+        ]);
+        Plat::create([
+            'gras' => 'peu',
+            'lvlPiment' => 'moyen',
+        ]);
+
+
+        Entree::create([
+        ]);
+        Entree::create([
+        ]);
+        Entree::create([
+        ]);
+        Entree::create([
+        ]);
+        Entree::create([
+        ]);
+
+
+        Item::create([
+            'name'=>'ToriDon',
+            'description'=>'',
+            'price'=>'7',
+            'entree_id'=>'1',
+        ]);
+        Item::create([
+            'name'=>'Edamame',
+            'description'=>'',
+            'price'=>'3.50',
+            'entree_id'=>'2',
+
+        ]);
+        Item::create([
+            'name'=>'Takoyaki',
+            'description'=>'',
+            'price'=>'7',
+            'entree_id'=>'3',
+
+        ]);
+        Item::create([
+            'name'=>'Gyoza',
+            'description'=>'',
+            'price'=>'7',
+            'entree_id'=>'4',
+
+        ]);
+        Item::create([
+            'name'=>'Kaarage',
+            'description'=>'',
+            'price'=>'8',
+            'entree_id'=>'5',
 
         ]);
 

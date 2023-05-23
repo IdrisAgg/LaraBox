@@ -20,6 +20,12 @@ class Restaurent extends Model
 
     protected $fillable = [
         'nom',
+        'ville',
+        'adresse',
+        'horaireDebut',
+        'horaireFin',
+        'numero',
+        'localisation',
         'image'
     ];
 }
