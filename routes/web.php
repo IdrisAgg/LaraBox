@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RestaurentController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\SelectionController;
+use App\Http\Controllers\PlatController;
 use App\Models\Restaurent;
 use Illuminate\Support\Facades\Route;
 
@@ -68,9 +69,9 @@ Route::middleware('auth')->group(function () {
     Route::get('suppSelection/{id}',[SelectionController::class,'suppSelection']);
     // ---------- ITEMS MIDDLEWARE----------
 
-    // ---------- DESSERT MIDDLEWARE----------
-    Route::resource('/desert', UserController::class);
-    // ---------- DESSERT MIDDLEWARE----------
+    // ---------- PLAT MIDDLEWARE----------
+    Route::resource('/plat', PlatController::class);
+    // ---------- PLAT MIDDLEWARE----------
 
 });
 

@@ -24,14 +24,23 @@
             ADMIN ACTIONS
           </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item " href="{{route('restaurent.create')}}">Ajouter un restaurant</a></li>
+            <li class="bg-dark text-white text-center">RESTO</li>
+                <!-- <li><a class="dropdown-item " href="{{route('restaurent.create')}}">Ajouter un restaurant</a></li> -->
+                <li><a class="dropdown-item" href="/adminAllResto">Gérer les restaurants</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li class="bg-dark text-white text-center">ORDER</li>
                 <li><a class="dropdown-item" href="/createOrder">Ajouter une Order</a></li>
                 <li><a class="dropdown-item" href="/allOrder">Liste des Order</a></li>
                 <li><a class="dropdown-item" href="/createSelection">Ajouter Selection</a></li>
                 <li><a class="dropdown-item" href="/allSelection">All Selection</a></li>
-                <li><a class="dropdown-item" href="/adminAllResto">adminAllResto</a></li>
+                <li class="bg-dark text-white text-center">ITEMS</li>
                 <li><a class="dropdown-item" href="/createItem">createItem</a></li>
                 <li><a class="dropdown-item" href="/allItems">allItems</a></li>
+                <li><a class="dropdown-item" href="/createItem">Create ENTRE</a></li>
+                <li><a class="dropdown-item" href="{{route('plat.create')}}">Create PLAT</a></li>
+                <li><a class="dropdown-item" href="{{route('plat.index')}}">All PLAT</a></li>
+                <li><a class="dropdown-item" href="/createItem">Create DESSERT</a></li>
+
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>

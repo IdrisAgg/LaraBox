@@ -2,7 +2,11 @@
 
 @section('content')
 <div class="text-center"><h1>Liste restaurents :</h1></div>
-<div class=" text-center d-flex justify-content-center my-5">
+<div class="container d-flex justify-content-end mt-5 ">
+    <a class="btn btn-primary " href="{{route('restaurent.create')}}">Ajouter un restaurant</a>
+</div>
+<div class="text-center d-flex justify-content-center my-2">
+
 
 <table class="table w-75 ">
     <thead class="table-dark">
@@ -15,8 +19,9 @@
 
         </tr>
     </thead>
+    
   <tbody>
-
+  
 
 <?php
 foreach($resto as $rest) {
@@ -43,6 +48,7 @@ foreach($resto as $rest) {
 ?>
    </tbody>
 </table>
+
 </div>
 
 

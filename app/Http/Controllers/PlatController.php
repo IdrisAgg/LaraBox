@@ -12,7 +12,9 @@ class PlatController extends Controller
      */
     public function index()
     {
-        //
+        $plats = Plat::GET();
+        return view('plat.allPlats')->with('plats',$plats);
+        
     }
 
     /**
@@ -20,7 +22,7 @@ class PlatController extends Controller
      */
     public function create()
     {
-        //
+        return view('plat.formPlat');
     }
 
     /**
@@ -28,7 +30,19 @@ class PlatController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all();
+        Plat::create($input);
+        return redirect('/plat/create');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy($id)
+    {
+        $plats = Plat::find($id);
+        $plats->delete();
+        return redirect('/plat')->with('plats',$plats);
     }
 
     /**
@@ -55,11 +69,5 @@ class PlatController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Plat $plat)
-    {
-        //
-    }
+    
 }

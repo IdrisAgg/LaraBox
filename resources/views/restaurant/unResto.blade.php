@@ -16,8 +16,9 @@
             </div>
             <p class="card-text"><strong></strong>{{ $unResto->horaireDebut }} - {{ $unResto->horaireFin }} </p>
             <p class="card-text"><strong></strong>{{ $unResto->adresse }} - {{ $unResto->ville }}</p>
-            <p class="card-text"><strong></strong>{{-- {{ $unResto->numero }} --}} 06.10.03.56.25</p>
-            <p class="card-text"><strong></strong> </p>
+            <p class="card-text"><strong></strong>{{ $unResto->numero }}</p>
+            <p class="card-text"><strong></strong>{{ $unResto->numero }}</p>
+            <p class="card-text"><strong></strong></p>
 
             {{-- @if (Auth::user()->isAdmin == null)
             <div class="text-center mt-">
@@ -102,7 +103,7 @@
 
 
 
-{{--
+<!-- 
 <div class="max-w-7xl mx-auto p-6 lg:p-8">
 
 
@@ -174,8 +175,7 @@
                 </div>
             </div>
         </div>
-    </div> --}}
-
+    </div> -->
 
 </div>
 @endsection

@@ -13,4 +13,9 @@ class Plat extends Model
     public function item(): BelongsTo{
         return $this-> belongsTo(Item::class,"plat_id");
     }
+
+    protected $fillable = [
+        'gras',
+        'lvlPiment',
+    ];
 }
