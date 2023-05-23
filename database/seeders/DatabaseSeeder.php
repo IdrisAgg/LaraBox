@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\restaurent;
+use App\Models\Restaurent;
 use App\Models\User;
 
 class DatabaseSeeder extends Seeder
@@ -40,8 +40,16 @@ class DatabaseSeeder extends Seeder
             'horaireFin' => '23:30',
             'numero'=> '01.01.01.01.01',
             'image'=> '/images/Kodawari_Ramen_Yaokocho.jpg',
+        ]);
 
-
+        restaurent::create([
+            'nom' => 'Kintaro',
+            'ville' => 'Paris',
+            'adresse' => '24 Rue Saint-Augustin',
+            'horaireDebut' => '11:30',
+            'horaireFin' => '22:15',
+            'numero'=> '01 47 42 13 14',
+            'image'=> '/images/kintaro.jpg',
         ]);
 
         restaurent::create([
