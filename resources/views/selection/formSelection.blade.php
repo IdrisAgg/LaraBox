@@ -32,8 +32,8 @@ créer resto
                     @if ($item->plat_id != null)
                     <li class="mt-3"><u><strong>{{$item->name}}</strong></u></li>
                     <li>{{$item->description }} - {{$item->price .'€'}}</li>
-                    {{-- <li><i>taux de gras:  {{$item->plat->gras }}</i></li>
-                    <li><i>Force du piment:  {{$item->plat->lvlPiment }}</i></li> --}}
+                    <li><i>taux de gras:  {{$item->plat->gras }}</i></li>
+                    <li><i>Force du piment:  {{$item->plat->lvlPiment }}</i></li>
                     @endif
                 @endforeach
             </ul>
@@ -47,8 +47,7 @@ créer resto
                     @if ($item->dessert_id != null)
                     <li class="mt-3"><u><strong>{{$item->name}}</strong></u></li>
                     <li>{{$item->description }} - {{$item->price .'€'}}</li>
-                    {{-- <li><i>taux de gras:  {{$item->plat->gras }}</i></li>
-                    <li><i>Force du piment:  {{$item->plat->lvlPiment }}</i></li> --}}
+                    <li><i>Taux de sucre:  {{$item->dessert->tauxSucre }}</i></li>
                     @endif
                 @endforeach
             </ul>
