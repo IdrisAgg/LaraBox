@@ -11,21 +11,21 @@ class Item extends Model
 {
     use HasFactory;
 
-    public function selection(): BelongsToMany
+    public function selections(): BelongsToMany
     {
         return $this->belongsToMany(Selection::class,"select_id");
     }
 
     public function entree(): BelongsTo{
-        return $this-> belongsTo(Item::class,"entree_id");
+        return $this-> belongsTo(Entree::class,"entree_id");
     }
 
     public function plat(): BelongsTo{
-        return $this-> belongsTo(Item::class,"plat_id");
+        return $this-> belongsTo(Plat::class,"plat_id");
     }
 
     public function dessert(): BelongsTo{
-        return $this-> belongsTo(Item::class,"dessert_id");
+        return $this-> belongsTo(Dessert::class,"dessert_id");
     }
 
 }

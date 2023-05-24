@@ -100,4 +100,9 @@ class SelectionController extends Controller
 
     }
 
+    public function uneSelection($id){
+        $selection = Selection::find($id);
+        return view('selection.uneSelection')->with('selection',$selection);
+    }
+
 }

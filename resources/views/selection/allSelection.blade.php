@@ -28,10 +28,15 @@ foreach($selection as $select)
             <li>{{$select->resto->nom }}</li>
             <li>{{$select->name }}</li>
             <li>{{$select->id }}</li>
+            <li>{{$select->resto->nom }}</li>
+
+
+            
+    
         </ul>
 
     </td>
-    <td><a href="/suppSelection/{{$select->id}}" class="btn btn-danger">Supprimer</a></td>
+    <td><a href="/suppSelection/{{$select->id}}" class="btn btn-danger mx-2">Supprimer</a><a href="/uneSelection/{{$select->id}}" class="btn btn-danger">voir</a></td>
 </tr>
 {{-- <tr>
 
@@ -43,9 +48,11 @@ foreach($selection as $select)
     <option value=""><li>{{$select->resto->nom }}</li></option>
     <option value=""><li>{{$select->resto->id }}</li></option>
     <option value=""><li>{{$select->id }}</li></option>
+
 </select>
     </td>
     <td><a href="/suppSelection/{{$select->id}}" class="btn btn-danger">Supprimer</a></td>
+
 </tr> --}}
 
 
@@ -53,6 +60,10 @@ foreach($selection as $select)
 <?php
 }
 ?>
+
+
+
+
    </tbody>
 </table>
 </div>

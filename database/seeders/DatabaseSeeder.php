@@ -9,6 +9,7 @@ use App\Models\Item;
 use App\Models\Plat;
 use Illuminate\Database\Seeder;
 use App\Models\Restaurent;
+use App\Models\Selection;
 use App\Models\User;
 
 class DatabaseSeeder extends Seeder
@@ -190,5 +191,27 @@ class DatabaseSeeder extends Seeder
 
         ]);
 
+
+
+        Selection::create([
+            'name'=>'selectKoda',
+            'resto_id'=>'1',
+        ]);
+        Selection::create([
+            'name'=>'selectUmami',
+            'resto_id'=>'2',
+        ]);
+        Selection::create([
+            'name'=>'selectIppudo',
+            'resto_id'=>'3',
+        ]);
+        Selection::create([
+            'name'=>'selectKinta',
+            'resto_id'=>'4',
+        ]);
+
+
+
+        
     }
 }

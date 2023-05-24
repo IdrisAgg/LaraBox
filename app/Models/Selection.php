@@ -15,7 +15,7 @@ class Selection extends Model
         return $this-> belongsTo(Restaurent::class,"resto_id");
     }
 
-    public function item(): BelongsToMany
+    public function items(): BelongsToMany
     {
         return $this->belongsToMany(Item::class,"item_id");
     }

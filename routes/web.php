@@ -67,6 +67,8 @@ Route::middleware('auth')->group(function () {
     Route::post('createSelection/{id}',[SelectionController::class,'createSelection']);
     Route::get('allSelection',[SelectionController::class,'allSelection']);
     Route::get('suppSelection/{id}',[SelectionController::class,'suppSelection']);
+    Route::get('uneSelection/{id}',[SelectionController::class,'uneSelection']);
+
     // ---------- ITEMS MIDDLEWARE----------
 
     // ---------- PLAT MIDDLEWARE----------
