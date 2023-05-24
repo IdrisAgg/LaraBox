@@ -4,50 +4,53 @@ créer resto
 @endsection
 
 @section('content')
-<div class="container d-flex justify-content-between">
+<div class=" d-flex justify-content-around">
     <div class="d-flex justify-content-center">
         <div class="text-center mt-3 mx-5">
             <p>Entrées</p>
-            <p class="">
-                LISTE D'ENTREE
-            </p>
+
             <ul>
-                <li class="mt-3"> <u> Kurogoma:</u> </li>
-                <li>Bouillon claire et epais</li>
-                <li class="mt-3"> <u> Shio Paitan:</u></li>
-                <li>Bouillon claire et epais</li>
-                <li class="mt-3"> <u> <strong> Kurogoma:</strong></u> </li>
-                <li>Bouillon claire et epais</li>
+                @foreach($items as $item)
+                    @if ($item->entree_id != null)
+                    <li class="mt-3"><u><strong>{{$item->name}}</strong></u></li>
+                    <li>{{$item->description }} - {{$item->price .'€'}}</li>
+                    {{-- <li><i>taux de gras:  {{$item->plat->gras }}</i></li>
+                    <li><i>Force du piment:  {{$item->plat->lvlPiment }}</i></li> --}}
+                    @endif
+                @endforeach
             </ul>
+
+
+
         </div>
 
         <div class="text-center mt-3 mx-5">
             <p>Plats</p>
-            <p class="">
-                LISTE DES PLATS
-            </p>
+
             <ul>
-                <li>Shio Paitan</li>
-                <li>Shio Paitan</li>
-                <li>Shio Paitan</li>
-                <li>Shio Paitan</li>
-                <li>Shio Paitan</li>
-                <li>tori don</li>
-                <li>tori don</li>
-                <li>tori don</li>
+                @foreach($items as $item)
+                    @if ($item->plat_id != null)
+                    <li class="mt-3"><u><strong>{{$item->name}}</strong></u></li>
+                    <li>{{$item->description }} - {{$item->price .'€'}}</li>
+                    {{-- <li><i>taux de gras:  {{$item->plat->gras }}</i></li>
+                    <li><i>Force du piment:  {{$item->plat->lvlPiment }}</i></li> --}}
+                    @endif
+                @endforeach
             </ul>
         </div>
 
         <div class="text-center mt-3 mx-5">
             <p>Desserts</p>
-            <p class="">
-                LISTE DES PLATS
-            </p>
-            <ul>
 
-                <li>tori don</li>
-                <li>tori don</li>
-                <li>tori don</li>
+            <ul>
+                @foreach($items as $item)
+                    @if ($item->dessert_id != null)
+                    <li class="mt-3"><u><strong>{{$item->name}}</strong></u></li>
+                    <li>{{$item->description }} - {{$item->price .'€'}}</li>
+                    {{-- <li><i>taux de gras:  {{$item->plat->gras }}</i></li>
+                    <li><i>Force du piment:  {{$item->plat->lvlPiment }}</i></li> --}}
+                    @endif
+                @endforeach
             </ul>
         </div>
     </div>

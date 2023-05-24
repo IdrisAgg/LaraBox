@@ -30,12 +30,12 @@ créer resto
                             </label>
                         </div>
 
-                            <hr class=" mt-5"> 
+                            <hr class=" mt-5">
 
                         <div class="d-flex justify-content-center mt-4">
                             <label class="form-label mx-2" for=""><strong><u>Force du piment</u></strong></label>
                         </div>
-                        
+
                         <div class="d-flex justify-content-center form-check">
                             <input class="form-check-input mx-2" type="radio" value="Faible" name="lvlPiment" id="flexRadioDefault1">
                             <label class="form-check-label" for="flexRadioDefault1">
@@ -54,16 +54,39 @@ créer resto
                                 Très fort
                         </div>
 
+                        <div class="d-flex justify-content-center ">
+                            <label class="form-label mx-2" for="">nom</label>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <input class="form-control w-25"  type="text" id="nom" name="name">
+                        </div>
+
+
+                        <div class="d-flex justify-content-center mt-3">
+                            <label class="form-label mx-2" for="">description</label>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <input class="form-control w-25"  type="text" name="description">
+                        </div>
+
+                        <div class="d-flex justify-content-center mt-3">
+                            <label class="form-label mx-2" for="">price</label>
+                        </div>
+                        <div class="d-flex justify-content-center ">
+                            <input class="form-control w-25"  type="text" name="price">
+                        </div>
+
+
                         <div class="d-flex justify-content-center mt-2">
                             <button type="submit" class="btn btn-primary px-4 mt-2">Ajouter</button>
-                        </div>                
+                        </div>
                         </div>
                     </div>
                 </div>
 
-                
 
-                
+
+
             </form>
 @endsection
 

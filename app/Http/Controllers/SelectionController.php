@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Item;
 use App\Models\Restaurent;
 use App\Models\Selection;
 use Illuminate\Http\Request;
@@ -66,7 +67,9 @@ class SelectionController extends Controller
 
     public function formSelection($id){
         $resto = Restaurent::find($id);
-        return view('selection.formSelection')->with('resto',$resto);
+        $items = Item::GET();
+
+        return view('selection.formSelection')->with('resto',$resto)->with('items',$items);
     }
 
 
@@ -90,7 +93,8 @@ class SelectionController extends Controller
     public function allSelection(){
         $selection = Selection::GET();
         $resto = Restaurent::GET();
-        return view('selection.allSelection ')->with('selection',$selection)->with('resto',$resto);
+        $items = Item::GET();
+        return view('selection.allSelection ')->with('selection',$selection)->with('resto',$resto)->with('items',$items);
     }
 
     public function suppSelection($id){

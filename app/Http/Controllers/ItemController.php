@@ -59,9 +59,11 @@ class ItemController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Item $item)
+    public function destroy($id)
     {
-        //
+        $items = Item::find($id);
+        $items->delete();
+        return redirect('/allItems')->with('items',$items);
     }
 
     public function createItem(Request $request){

@@ -34,8 +34,18 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    // ----------RESTO MIDDLEWARE----------
+
+    // ----------ROUTE RESOURCE----------
     Route::resource('/restaurent',RestaurentController::class);
+    Route::resource('/item', ItemController::class);
+    Route::resource('/plat', PlatController::class);
+
+    // ----------ROUTE RESOURCE----------
+
+
+
+
+    // ----------RESTO MIDDLEWARE----------
     Route::get('createResto',[RestaurentController::class,'formResto']);
     Route::post('createResto',[RestaurentController::class,'createResto']);
     Route::get('modifResto/{id}',[RestaurentController::class,'formModif']);
@@ -59,22 +69,19 @@ Route::middleware('auth')->group(function () {
     // ---------- SELECTION MIDDLEWARE----------
 
     // ---------- ITEMS MIDDLEWARE----------
+
     Route::get('createItem',[ItemController::class,'formItems']);
     Route::post('createItem',[ItemController::class,'createItem']);
     Route::get('allItems',[ItemController::class,'allItems']);
     // Route::get('formItems',[ItemController::class,'formItems']);
-
     Route::post('createSelection/{id}',[SelectionController::class,'createSelection']);
     Route::get('allSelection',[SelectionController::class,'allSelection']);
     Route::get('suppSelection/{id}',[SelectionController::class,'suppSelection']);
     Route::get('uneSelection/{id}',[SelectionController::class,'uneSelection']);
-
     // ---------- ITEMS MIDDLEWARE----------
 
     // ---------- PLAT MIDDLEWARE----------
-    Route::resource('/plat', PlatController::class);
     // ---------- PLAT MIDDLEWARE----------
-
 });
 
 require __DIR__.'/auth.php';

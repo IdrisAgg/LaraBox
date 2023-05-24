@@ -7,6 +7,7 @@
 <table class="table w-75 ">
     <thead class="table-dark">
         <tr>
+            <td>id </td>
             <td>Nom Selection </td>
             <td>Restaurent</td>
             <td>Items</td>
@@ -17,16 +18,18 @@
 
 
 <tr>
-
+    <td>{{$selection->id}}</td>
     <td>{{$selection->name}}</td>
     <td>{{$selection->resto->nom}}</td>
 
-    @foreach($selection->items as $item)
-        <span>{{$item->name}}</span>
-    @endforeach
+    @forelse($selection->items as $item)
+    <td>oui{{$item->name}}</td>
+    @empty
+    <td>pas de d'items</td>
+    @endforelse
 
-    
-    
+
+
         </ul>
 
     </td>

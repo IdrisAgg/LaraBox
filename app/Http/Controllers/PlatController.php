@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Item;
 use App\Models\Plat;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class PlatController extends Controller
     {
         $plats = Plat::GET();
         return view('plat.allPlats')->with('plats',$plats);
-        
+
     }
 
     /**
@@ -32,7 +33,8 @@ class PlatController extends Controller
     {
         $input = $request->all();
         Plat::create($input);
-        return redirect('/plat/create');
+        Item::create($input);
+        return redirect('/plat');
     }
 
     /**
@@ -69,5 +71,5 @@ class PlatController extends Controller
         //
     }
 
-    
+
 }

@@ -31,38 +31,16 @@ foreach($selection as $select)
             <li>{{$select->resto->nom }}</li>
 
 
-            
-    
         </ul>
 
     </td>
     <td><a href="/suppSelection/{{$select->id}}" class="btn btn-danger mx-2">Supprimer</a><a href="/uneSelection/{{$select->id}}" class="btn btn-danger">voir</a></td>
+
 </tr>
-{{-- <tr>
-
-    <td>{{$select->name}}</td>
-    <td>{{$select->resto->nom }}</td>
-    <td>
-<select name="" id="">
-    <option value=""><li>Voir les produits</li></option>
-    <option value=""><li>{{$select->resto->nom }}</li></option>
-    <option value=""><li>{{$select->resto->id }}</li></option>
-    <option value=""><li>{{$select->id }}</li></option>
-
-</select>
-    </td>
-    <td><a href="/suppSelection/{{$select->id}}" class="btn btn-danger">Supprimer</a></td>
-
-</tr> --}}
-
-
 
 <?php
 }
 ?>
-
-
-
 
    </tbody>
 </table>

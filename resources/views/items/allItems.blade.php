@@ -10,6 +10,8 @@
             <td>Nom</td>
             <td>Descriprion</td>
             <td>Prix</td>
+            <td>Niveau de piment</td>
+            <td>Taux de gras</td>
             <td>Action</td>
 
         </tr>
@@ -17,27 +19,27 @@
   <tbody>
 
 
-<?php
-foreach($items as $item) {
-?>
+
+@foreach($items as $item)
 <tr>
     <td>{{$item->name}}</td>
     <td>{{$item->description }}</td>
     <td>{{$item->price }}</td>
+    <td>{{$item->plat->gras }}</td>
+    <td>{{$item->plat->lvlPiment }}</td>
+
+
     <td>
-        <a href="/afficheUnResto/{{$item->id}}" class="btn btn-secondary">plus d'info ...</a>
-        <a href="/createSelection/{{$item->id}}" class="btn btn-secondary">SELECTION</a>
-        <a href="/deleteResto/{{$item->id}}" class="btn btn-danger">Supprimer</a>
+        <a href="{{route('item.destroy',$item)}}" class="btn btn-secondary">plus d'info ...</a>
+        <a href="{{route('item.destroy',$item)}}" class="btn btn-secondary">SELECTION</a>
+        <form action="{{route('item.destroy',$item)}}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">Supprimer</a></button>
+        </form>
     </td>
-
-
 </tr>
-
-
-
-<?php
-}
-?>
+@endforeach
    </tbody>
 </table>
 </div>
