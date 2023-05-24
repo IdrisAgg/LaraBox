@@ -20,7 +20,7 @@ class Selection extends Model
 
     public function items(): BelongsToMany
     {
-        return $this->belongsToMany(Item::class);
+        return $this->BelongsToMany(Item::class);
     }
 
 }

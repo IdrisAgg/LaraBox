@@ -72,24 +72,27 @@ créer resto
                     <label class="form-label mx-2" for="">Entrée</label>
                 </div>
                 <div class="d-flex justify-content-center ">
-                    <select class="form-control " type="text" value="" name="">
-                        <option value="">-- choisissez une entrée --</option>
-                        <option value="">Kurogoma</option>
-                        <option value="">Shio Paitan</option>
-                        <option value="">Shio Classique</option>
-                        <option value="">Niboshi</option>
-                    </select>                </div>
+                    <select {{-- style="width: 50%" --}} class="form-control " type="text" value="" name="">
+                        <option value="">-- choisissez ue entree --</option>
+                        @foreach($items as $item)
+                        @if ($item->entree_id != null)
+                        <option value="{{$item->entree_id}}">{{$item->name}}</option>
+                        @endif
+                    @endforeach
+                    </select>
+                </div>
 
                 <div class="d-flex justify-content-center mt-3">
                     <label class="form-label mx-2" for="">Plat</label>
                 </div>
                 <div class="d-flex justify-content-center ">
-                    <select class="form-control " type="text" value="" name="">
+                    <select {{-- style="width: 50%" --}} class="form-control " type="text" value="" name="">
                         <option value="">-- choisissez un plat --</option>
-                        <option value="">Kurogoma</option>
-                        <option value="">Shio Paitan</option>
-                        <option value="">Shio Classique</option>
-                        <option value="">Niboshi</option>
+                        @foreach($items as $item)
+                        @if ($item->plat_id != null)
+                        <option value="{{$item->plat_id}}">{{$item->name}}</option>
+                        @endif
+                    @endforeach
                     </select>
                 </div>
 
@@ -97,13 +100,13 @@ créer resto
                     <label class="form-label mx-2" for="">Dessert</label>
                 </div>
                 <div class="d-flex justify-content-center ">
-                    <select {{-- style="width: 50%" --}} class="form-control " type="text" placeholder="dessert" value="" name="">
-                            <option value="">-- choisissez un dessert --</option>
-                            <option value="">Kurogoma</option>
-                            <option value="">Shio Paitan</option>
-                            <option value="">Shio Classique</option>
-                            <option value="">Niboshi</option>
-
+                    <select {{-- style="width: 50%" --}} class="form-control " type="text" value="" name="">
+                        <option value="">-- choisissez un dessert --</option>
+                        @foreach($items as $item)
+                        @if ($item->dessert_id != null)
+                        <option value="{{$item->dessert_id}}">{{$item->name}}</option>
+                        @endif
+                    @endforeach
                     </select>
                 </div>
 

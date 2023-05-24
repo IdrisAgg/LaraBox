@@ -21,13 +21,12 @@
     <td>{{$selection->id}}</td>
     <td>{{$selection->name}}</td>
     <td>{{$selection->resto->nom}}</td>
-
-    @forelse($selection->items as $item)
-    <td>oui{{$item->name}}</td>
-    @empty
-    <td>pas de d'items</td>
-    @endforelse
-
+    <td>
+    @foreach($selection->items as $item)
+    <div class="">    {{$item->name}}
+    </div>
+    @endforeach
+    </td>
 
 
         </ul>
