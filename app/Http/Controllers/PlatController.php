@@ -23,7 +23,8 @@ class PlatController extends Controller
      */
     public function create()
     {
-        return view('plat.formPlat');
+        $plats  = Plat::GET();
+        return view('plat.formPlat')->with('plats',$plats);
     }
 
     /**
