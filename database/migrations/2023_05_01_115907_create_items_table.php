@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId("entree_id")->nullable()->constrained("entrees","id")->onDelete("cascade");
             $table->foreignId("plat_id")->nullable()->constrained("plats","id")->onDelete("cascade");
             $table->foreignId("dessert_id")->nullable()->constrained("desserts","id")->onDelete("cascade");
-
+            $table->foreignId("resto_id")->nullable()->constrained("restaurents","id")->onDelete("cascade");
             // $table->foreignId("select_id")->constrained("selections","id")->onDelete("cascade");
             $table->timestamps();
         });

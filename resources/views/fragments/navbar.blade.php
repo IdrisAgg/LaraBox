@@ -37,7 +37,7 @@
                 <li><a class="dropdown-item" href="/createItem">createItem</a></li>
                 <li><a class="dropdown-item" href="/allItems">allItems</a></li>
                 <li><a class="dropdown-item" href="/createItem">Create ENTRE</a></li>
-                <li><a class="dropdown-item" href="{{route('plat.create')}}">Create PLAT</a></li>
+                <li><a class="dropdown-item" href="/">Create PLAT</a></li>
                 <li><a class="dropdown-item" href="{{route('plat.index')}}">All PLAT</a></li>
                 <li><a class="dropdown-item" href="/createItem">Create DESSERT</a></li>
 

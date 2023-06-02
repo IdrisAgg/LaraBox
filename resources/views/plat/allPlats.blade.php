@@ -26,7 +26,7 @@ foreach($plats as $plat) {
     <td>{{$plat->lvlPiment }}</td>
 
     <td class="d-flex justify-content-center ">
-        <a href="/plat/delete/{{$plat->id}}" class="btn btn-secondary mx-1">plus d'info ...</a>
+        <a href="" class="btn btn-secondary mx-1">Ajouter un plat</a>
         <a href="/plat/{{$plat->id}}" class="btn btn-secondary mx-1">SELECTION</a>
         <form action="{{route('plat.destroy',$plat)}}" method="POST">
             @csrf

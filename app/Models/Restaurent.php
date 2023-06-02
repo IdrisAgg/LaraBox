@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-
+use App\Models\Item;
 class Restaurent extends Model
 {
     use HasFactory;
@@ -16,6 +16,10 @@ class Restaurent extends Model
 
     public function selection(): HasMany{
         return $this-> hasMany(Selection::class,"selection_id");
+    }
+
+    public function items(): HasMany{
+        return $this-> hasMany(Item::class,"selection_id");
     }
 
     protected $fillable = [

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Item;
 use App\Models\Plat;
+use App\Models\Restaurent;
 use Illuminate\Http\Request;
 
 class PlatController extends Controller
@@ -23,7 +24,13 @@ class PlatController extends Controller
      */
     public function create()
     {
-        return view('plat.formPlat');
+
+    }
+
+    public function formPlat($id)
+    {
+        $resto = Restaurent::find($id);
+        return view('plat.formPlat')->with('resto',$resto);
     }
 
     /**
@@ -32,8 +39,9 @@ class PlatController extends Controller
     public function store(Request $request)
     {
         $input = $request->all();
-        Plat::create($input);
         Item::create($input);
+
+        Plat::create($input);
         return redirect('/plat');
     }
 
@@ -52,8 +60,10 @@ class PlatController extends Controller
      */
     public function show(Plat $plat)
     {
-        //
+        // $resto = Restaurent::find($id);
+        // return view('plat.formPlat')->with('resto',$resto);
     }
+
 
     /**
      * Show the form for editing the specified resource.

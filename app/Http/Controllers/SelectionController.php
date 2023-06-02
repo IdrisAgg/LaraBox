@@ -77,24 +77,21 @@ class SelectionController extends Controller
         $this->validate($request,[
             'nom'=>'required',
             'resto_id'=>'required',
+            // 'item_id'=>'required',
         ]);
 
         $selection = new Selection();
-
         $selection->name = $request->input('nom');
         $selection->resto_id = $request->input('resto_id');
+        // $selection->item_id = $request->input('item_id');
         $selection->save();
-
-
         return redirect('/');
     }
 
 
     public function allSelection(){
         $selection = Selection::GET();
-        $resto = Restaurent::GET();
-        $items = Item::GET();
-        return view('selection.allSelection ')->with('selection',$selection)->with('resto',$resto)->with('items',$items);
+        return view('selection.allSelection ')->with('selection',$selection);
     }
 
     public function suppSelection($id){
@@ -106,7 +103,8 @@ class SelectionController extends Controller
 
     public function uneSelection($id){
         $selection = Selection::find($id);
-        return view('selection.uneSelection')->with('selection',$selection);
+        $items = Item::get();
+        return view('selection.uneSelection')->with(['selection'=>$selection,'items'=> $items]);
     }
 
 }

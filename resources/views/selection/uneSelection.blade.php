@@ -23,9 +23,12 @@
     <td>{{$selection->resto->nom}}</td>
     <td>
     @foreach($selection->items as $item)
-    <div class="">    {{$item->name}}
-    </div>
+    <div class="">{{$item->name}}</div>
     @endforeach
+
+
+
+
     </td>
 
 

@@ -10,6 +10,8 @@ use App\Models\Selection;
 use App\Models\Plat;
 use App\Models\Entree;
 use App\Models\Dessert;
+use App\Models\Restaurent;
+
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Item extends Model
@@ -19,7 +21,7 @@ class Item extends Model
 
     public function selections(): BelongsToMany
     {
-        return $this->belongsToMany(Selection::class);
+        return $this->belongsToMany(Selection::class,"item_selection");
     }
 
     public function entree(): BelongsTo{
@@ -34,10 +36,15 @@ class Item extends Model
         return $this-> BelongsTo(Dessert::class,"dessert_id");
     }
 
+    public function resto(): BelongsTo{
+        return $this-> BelongsTo(Restaurent::class,"resto_id");
+    }
+
     protected $fillable = [
         'name',
         'description',
         'price',
+        'resto_id',
     ];
 
 }

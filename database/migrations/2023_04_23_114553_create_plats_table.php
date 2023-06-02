@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('plats', function (Blueprint $table) {
             $table->id();
-            $table->string('gras');
-            $table->string('lvlPiment');
+            $table->string('gras')->nullable();
+            $table->string('lvlPiment')->nullable();
             $table->timestamps();
         });
     }

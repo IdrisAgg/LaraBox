@@ -10,9 +10,10 @@
             <td>Nom</td>
             <td>Descriprion</td>
             <td>Prix</td>
-            <td>Niveau de piment</td>
-            <td>Taux de gras</td>
+
+            <td>Restaurent associé</td>
             <td>Action</td>
+
 
         </tr>
     </thead>
@@ -22,22 +23,32 @@
 
 @foreach($items as $item)
 <tr>
-    <td>{{$item->name}}</td>
-    <td>{{$item->description }}</td>
-    <td>{{$item->price }}</td>
-    <td>{{$item->plat->gras }}</td>
-    <td>{{$item->plat->lvlPiment }}</td>
+    @if (!empty($item->resto->nom))
+        <td>{{$item->name}}</td>
+        <td>{{$item->description }}</td>
+        <td>{{$item->price }}</td>
+
+        @if (!empty($item->plat->gras))
+            <td>{{$item->plat->gras}}</td>
+            <td>{{$item->plat->lvlPiment}}</td>
+
+        @else
+
+        @endif
+        <td>{{$item->resto->nom }}</td>
+        <td>
+            <a href="{{route('item.destroy',$item)}}" class="btn btn-secondary">plus d'info ...</a>
+            <a href="{{route('item.destroy',$item)}}" class="btn btn-secondary">SELECTION</a>
+            <form action="{{route('item.destroy',$item)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger">Supprimer</a></button>
+            </form>
+        </td>
+
+    @endif
 
 
-    <td>
-        <a href="{{route('item.destroy',$item)}}" class="btn btn-secondary">plus d'info ...</a>
-        <a href="{{route('item.destroy',$item)}}" class="btn btn-secondary">SELECTION</a>
-        <form action="{{route('item.destroy',$item)}}" method="POST">
-            @csrf
-            @method('DELETE')
-            <button type="submit" class="btn btn-danger">Supprimer</a></button>
-        </form>
-    </td>
 </tr>
 @endforeach
    </tbody>

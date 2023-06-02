@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
+use App\Models\Plat;
 use App\Models\Restaurent;
 use Illuminate\Http\Request;
 
@@ -71,6 +72,9 @@ class ItemController extends Controller
             'name'=>'required',
             'description'=>'required',
             'price'=>'required',
+            'resto_id'=>'required',
+            'plat_id'=>'required',
+
 
         ]);
 
@@ -79,22 +83,22 @@ class ItemController extends Controller
         $item->name = $request->input('name');
         $item->description = $request->input('description');
         $item->price = $request->input('price');
+        $item->resto_id = $request->input('resto_id');
+        $item->plat_id = $request->input('plat_id');
         $item->save();
 
         return redirect('/allItems');
     }
 
 
-    public function formItems(){
-        $resto = Restaurent::GET();
-        return view('items.formItems')->with('resto',$resto);
+    public function formItems($id){
+        $resto = Restaurent::find($id);
+        $plats = Plat::get();
+        return view('items.formItems')->with(['resto'=>$resto,'plats'=>$plats]);
     }
 
     public function allItems(){
-        $items = Item::GET();
+        $items = Item::with('plat')->GET();
         return view('items.allItems')->with('items',$items);
     }
-
-
-
 }

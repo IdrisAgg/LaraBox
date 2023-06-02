@@ -7,6 +7,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\SelectionController;
 use App\Http\Controllers\PlatController;
 use App\Models\Restaurent;
+use App\Models\Selection;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -70,7 +71,7 @@ Route::middleware('auth')->group(function () {
 
     // ---------- ITEMS MIDDLEWARE----------
 
-    Route::get('createItem',[ItemController::class,'formItems']);
+    Route::get('createItem/{id}',[ItemController::class,'formItems']);
     Route::post('createItem',[ItemController::class,'createItem']);
     Route::get('allItems',[ItemController::class,'allItems']);
     // Route::get('formItems',[ItemController::class,'formItems']);
@@ -81,6 +82,14 @@ Route::middleware('auth')->group(function () {
     // ---------- ITEMS MIDDLEWARE----------
 
     // ---------- PLAT MIDDLEWARE----------
+    Route::get('formPlat/{id}',[PlatController::class,'formPlat']);
+
+
+    Route::get('/manyToMany',function(){
+
+        return Selection::with('items')->get();
+    });
+
     // ---------- PLAT MIDDLEWARE----------
 });
 
