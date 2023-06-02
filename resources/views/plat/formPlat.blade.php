@@ -61,6 +61,7 @@ créer resto
                 <input class="form-control w-25"  type="text" id="nom" name="name">
             </div>
 
+                            <input class="form-control w-25"  value="" type="text" id="nom" name="plat_id">
 
             <div class="d-flex justify-content-center mt-3">
                 <label class="form-label mx-2" for="">description</label>

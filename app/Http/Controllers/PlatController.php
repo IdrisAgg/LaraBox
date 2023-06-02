@@ -24,7 +24,7 @@ class PlatController extends Controller
      */
     public function create()
     {
-
+        //
     }
 
     public function formPlat($id)
