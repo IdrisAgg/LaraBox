@@ -95,8 +95,8 @@ class OrderController extends Controller
         return redirect('/');
     }
 
-    public function formOrder(){
-        $resto = restaurent::GET();
+    public function formOrder($id){
+        $resto = restaurent::find($id);
         return view('order.formOrder')->with('resto',$resto);
     }
 

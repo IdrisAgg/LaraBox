@@ -50,7 +50,7 @@
                 <p class="card-text text-center">Vous avez la possibilité de réserver à l'avance</p>
                 {{-- @if (Auth::user()->isAdmin == null) --}}
                 <div class="text-center mt-">
-                    <a href="/createOrder" class="btn btn-outline-info ">réserver</a>
+                    <a href="/createResa/{{$unResto->id}}" class="btn btn-outline-info ">Réserver</a>
                 </div>
                 {{-- @endif --}}
             </div>

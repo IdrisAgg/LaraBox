@@ -6,6 +6,9 @@ use App\Http\Controllers\RestaurentController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\SelectionController;
 use App\Http\Controllers\PlatController;
+use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\UserController;
+use App\Models\Reservation;
 use App\Models\Restaurent;
 use App\Models\Selection;
 use Illuminate\Support\Facades\Route;
@@ -56,10 +59,18 @@ Route::middleware('auth')->group(function () {
     // ----------RESTO MIDDLEWARE----------
 
     // ----------ORDER MIDDLEWARE----------
-    Route::get('createOrder',[OrderController::class,'formOrder']);
-    Route::post('createOrder',[OrderController::class,'createOrder']);
-    Route::get('allOrder',[OrderController::class,'allOrder']);
-    Route::get('deleteOrder/{id}',[OrderController::class,'suppOrder']);
+    // Route::get('createOrder/{id}',[OrderController::class,'formOrder']);
+    // Route::post('createOrder',[OrderController::class,'createOrder']);
+    // Route::get('allOrder',[OrderController::class,'allOrder']);
+    // Route::get('deleteOrder/{id}',[OrderController::class,'suppOrder']);
+    // ----------ORDER MIDDLEWARE----------
+
+    // ----------ORDER MIDDLEWARE----------
+    Route::get('createResa/{id}',[ReservationController::class,'formResa']);
+    Route::post('createResa',[ReservationController::class,'createResa']);
+    Route::get('allResa',[ReservationController::class,'allResa']);
+    Route::get('deleteResa/{id}',[ReservationController::class,'suppResa']);
+    Route::get('resaUser',[ReservationController::class,'resaUser']);
     // ----------ORDER MIDDLEWARE----------
 
     // ---------- SELECTION MIDDLEWARE----------
@@ -97,6 +108,7 @@ require __DIR__.'/auth.php';
 
 // --------------------mes routes--------------------
 Route::get('/', function () {return view('index');});
+Route::get('allUsers',[UserController::class,'allUser']);
 
 // ----------RESTO ----------
 Route::get('afficheAllResto',[RestaurentController::class,'allResto']);

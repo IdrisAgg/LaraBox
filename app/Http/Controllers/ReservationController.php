@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Reservation;
+use App\Models\Restaurent;
 use Illuminate\Http\Request;
 
 class ReservationController extends Controller
@@ -61,5 +62,50 @@ class ReservationController extends Controller
     public function destroy(Reservation $reservation)
     {
         //
+    }
+
+    public function formResa($id){
+        $resto = Restaurent::find($id);
+        return view('resa.formResa')->with('resto',$resto);
+    }
+
+
+    public function createResa(Request $request){
+        $this->validate($request,[
+            'nom'=>'required',
+            'restaurent'=>'required',
+            'userId'=>'required',
+            'date'=>'required',
+            'horaire'=>'required',
+
+        ]);
+
+        $order = new Reservation();
+
+        $order->name = $request->input('nom');
+        $order->resto_id = $request->input('restaurent');
+        $order->user_id = $request->input('userId');
+        $order->date = $request->input('date');
+        $order->horaire = $request->input('horaire');
+
+        $order->save();
+
+        return redirect('/');
+    }
+
+    public function allResa(){
+        $orders = Reservation::GET();
+        return view('resa.allResa')->with('orders',$orders);
+    }
+
+    public function resaUser(){
+        $orders = Reservation::GET();
+        return view('resa.resaUser')->with('orders',$orders);
+    }
+
+    public function suppResa($id){
+        $uneResa = Reservation::find($id);
+        $uneResa->delete();
+        return redirect('/allResa');
     }
 }

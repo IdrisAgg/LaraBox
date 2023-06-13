@@ -30,7 +30,7 @@
                 <li><hr class="dropdown-divider"></li>
                 <li class="bg-dark text-white text-center">ORDER</li>
                 <li><a class="dropdown-item" href="/createOrder">Ajouter une Order</a></li>
-                <li><a class="dropdown-item" href="/allOrder">Liste des Order</a></li>
+                <li><a class="dropdown-item" href="/allResa">Liste des Order</a></li>
                 <li><a class="dropdown-item" href="/createSelection">Ajouter Selection</a></li>
                 <li><a class="dropdown-item" href="/allSelection">All Selection</a></li>
                 <li class="bg-dark text-white text-center">ITEMS</li>
@@ -40,6 +40,10 @@
                 <li><a class="dropdown-item" href="/">Create PLAT</a></li>
                 <li><a class="dropdown-item" href="{{route('plat.index')}}">All PLAT</a></li>
                 <li><a class="dropdown-item" href="/createItem">Create DESSERT</a></li>
+                <li class="bg-dark text-white text-center">USERS</li>
+                <li><a class="dropdown-item" href="/allUsers">Gérer les users</a></li>
+
+
 
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>

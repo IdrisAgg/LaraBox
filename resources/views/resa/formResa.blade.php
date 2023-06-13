@@ -4,22 +4,17 @@ créer resto
 @endsection
 
 @section('content')
-<form class="mt-5" action="/createOrder" method="POST">
+<h2 class="text-center">Reservation - {{$resto->nom}}</h2>
+<form class="mt-5" action="/createResa" method="POST">
                 @csrf
 
                 <div class="d-flex justify-content-center">
-                    <input class="form-control w-25"  type="text" id="nom" name="nom" value="Resa{{Auth::user()->id}}1{{Auth::user()->id}}06">
+                    <input class="form-control w-25"  type="hidden" id="nom" name="nom" value="Resa{{Auth::user()->id}}1{{Auth::user()->id}}06">
                 </div>
 
-                <div class="form-group d-flex justify-content-center mt-3">
-                    <label for="exampleFormControlSelect1">Restaurant</label>
+                <div class="form-group d-flex justify-content-center">
+                    <input type="hidden" class="form-control w-25" name="restaurent" value="{{$resto->id}}">
                 </div>
-
-                <fieldset >
-                    <div class="form-group d-flex justify-content-center">
-                      <input type="text" class="form-control w-25" name="restaurent" value="{{$resto->id}}">
-                    </div>
-                </fieldset>
 
                 <div class="d-flex justify-content-center mt-3">
                     <label class="form-label mx-2" for="">Date</label>
@@ -46,7 +41,7 @@ créer resto
                 </div>
 
                 <div class="d-flex justify-content-center mt-3">
-                    <input class="form-control w-25"  type="text" id="nom" name="userId" value="{{Auth::user()->id}}">
+                    <input class="form-control w-25"  type="hidden" id="nom" name="userId" value="{{Auth::user()->id}}">
                 </div>
 
                 <div class="d-flex justify-content-center mt-2">
