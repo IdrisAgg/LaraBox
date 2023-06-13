@@ -33,7 +33,7 @@ foreach($resto as $rest) {
     <td>{{$rest->horaireDebut }} - {{$rest->horaireFin }}</td>
     <td>
         <a href="/afficheUnResto/{{$rest->id}}" class="btn btn-secondary">plus d'info ...</a>
-        <a href="/formPlat/{{$rest->id}}" class="btn btn-secondary">SELECTION</a>
+        <a href="/formPlat/{{$rest->id}}" class="btn btn-secondary">créer un plat</a>
         <a href="/deleteResto/{{$rest->id}}" class="btn btn-danger">Supprimer</a>
         <a href="/modifResto/{{$rest->id}}" class="btn btn-warning">Modifier</a>
         <a href="/createItem/{{$rest->id}}" class="btn btn-warning">Modifier</a>

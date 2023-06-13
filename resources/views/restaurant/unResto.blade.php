@@ -38,16 +38,16 @@
                 <p class="card-text text-center">Découvrez le menu composé de plats savoureusement concocté par notre chef venu tout droit d'une ville au Japon, je sais pas laquelle, ayant travaillé dans le restaurent tata au japon putain je suis drole </p>
                 {{-- @if (Auth::user()->isAdmin == null) --}}
                 <div class="text-center mt-">
-                    <a href="/createSelection/{{$unResto->id}}" class="btn btn-outline-info ">réserver</a>
+                    <a href="/createSelection/{{$unResto->id}}" class="btn btn-outline-info ">Voir le menu</a>
                 </div>
                 {{-- @endif --}}
             </div>
         </div>
         <div class="card mx-1 col-xs-12 col-sm-5 col-md-5 col-lg-4" >
             <div class="card-body">
-                <h5 class="card-title  text-center">TITRE </h5>
+                <h5 class="card-title  text-center">RÉSERVATION </h5>
                 <hr>
-                <p class="card-text text-center">descriptiondescriptiondescriptiondescription</p>
+                <p class="card-text text-center">Vous avez la possibilité de réserver à l'avance</p>
                 {{-- @if (Auth::user()->isAdmin == null) --}}
                 <div class="text-center mt-">
                     <a href="/createOrder" class="btn btn-outline-info ">réserver</a>
@@ -67,7 +67,7 @@
                 <p class="card-text text-center">descriptiondescriptiondescriptiondescription</p>
                 {{-- @if (Auth::user()->isAdmin == null) --}}
                 <div class="text-center mt-">
-                    <a href="/createOrder" class="btn btn-outline-info ">réserver</a>
+                    <a href="/createOrder" class="btn btn-outline-info ">PLUS...</a>
                 </div>
                 {{-- @endif --}}
             </div>
@@ -80,7 +80,7 @@
                 <p class="card-text text-center">descriptiondescriptiondescriptiondescription</p>
                 {{-- @if (Auth::user()->isAdmin == null) --}}
                 <div class="text-center mt-">
-                    <a href="/allSelection" class="btn btn-outline-info ">réserver</a>
+                    <a href="/allSelection" class="btn btn-outline-info ">PLUS...</a>
                 </div>
                 {{-- @endif --}}
             </div>
@@ -103,7 +103,7 @@
 
 
 
-<!-- 
+<!--
 <div class="max-w-7xl mx-auto p-6 lg:p-8">
 
 

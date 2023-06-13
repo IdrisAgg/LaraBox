@@ -46,4 +46,8 @@ class User extends Authenticatable
     public function orders(): HasMany{
         return $this-> hasMany(order::class,"resto_id");
     }
+
+    public function resas(): HasMany{
+        return $this-> hasMany(Reservation::class,"resto_id");
+    }
 }

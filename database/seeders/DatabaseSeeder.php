@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Dessert;
 use App\Models\Entree;
 use App\Models\Item;
 use App\Models\Plat;
@@ -155,41 +156,131 @@ class DatabaseSeeder extends Seeder
         Entree::create([
         ]);
 
+        Dessert::create([
+            'tauxSucre'=>'10%'
+        ]);
+        Dessert::create([
+            'tauxSucre'=>'50%'
+        ]);
+        Dessert::create([
+            'tauxSucre'=>'70%'
+        ]);
+        Dessert::create([
+            'tauxSucre'=>'5%'
+        ]);
+        Dessert::create([
+            'tauxSucre'=>'0%'
+        ]);
+
 
         Item::create([
             'name'=>'ToriDon',
-            'description'=>'',
+            'description'=>'Poulet grillé et mariné 24h, accompagné de son riz blanc parfaitement cuit.',
             'price'=>'7',
             'entree_id'=>'1',
         ]);
         Item::create([
             'name'=>'Edamame',
-            'description'=>'',
+            'description'=>'Haricot japonais',
             'price'=>'3.50',
             'entree_id'=>'2',
 
         ]);
         Item::create([
             'name'=>'Takoyaki',
-            'description'=>'',
+            'description'=>'Boulette de poulpe fondant et cremeux',
             'price'=>'7',
             'entree_id'=>'3',
 
         ]);
         Item::create([
             'name'=>'Gyoza',
-            'description'=>'',
+            'description'=>'Raviolis japonais moelleux et légèrement grillé, coustillant à souhait.',
             'price'=>'7',
             'entree_id'=>'4',
 
         ]);
         Item::create([
             'name'=>'Kaarage',
-            'description'=>'',
+            'description'=>"Poulet frit, composé d'une chapelure ''panco''",
             'price'=>'8',
             'entree_id'=>'5',
 
         ]);
+
+        Item::create([
+            'name'=>'Shio paitan',
+            'description'=>"Bouillon crémeux et léger, texture epaisse, fort en gout de poulet, légèrement citroné",
+            'price'=>'14',
+            'plat_id'=>'1',
+
+        ]);
+
+        Item::create([
+            'name'=>'Kurogoma',
+            'description'=>"Bouillon corsé en sésame noir, crémeux et léger, ",
+            'price'=>'8',
+            'plat_id'=>'2',
+
+        ]);
+
+        Item::create([
+            'name'=>'Niboshi Paitan',
+            'description'=>"Bouillon préparé avec une infusion de sardine, gout prononcé et salé, texture crémeuse et légère ",
+            'price'=>'8',
+            'plat_id'=>'3',
+
+        ]);
+
+        Item::create([
+            'name'=>'Shio ramen',
+            'description'=>"Bouillon claire et très légé, légèrement salé subtile en gout de poulet",
+            'price'=>'8',
+            'plat_id'=>'4',
+
+        ]);
+
+        Item::create([
+            'name'=>'Tan Tan men',
+            'description'=>"Bouillon végétatien, mijoté avec 12 légumes de saison, très riche en gout ",
+            'price'=>'8',
+            'plat_id'=>'5',
+
+        ]);
+
+        Item::create([
+            'name'=>'Dorayaki',
+            'description'=>"Pancake japonais fourré au thé matcha",
+            'price'=>'4',
+            'dessert_id'=>'1',
+        ]);
+        Item::create([
+            'name'=>'Mochi',
+            'description'=>"Gateau a base de pate de riz, fourré au fruit",
+            'price'=>'3',
+            'dessert_id'=>'2',
+        ]);
+        Item::create([
+            'name'=>'Cheesecake-Yuzu',
+            'description'=>"Cheesecake parfumé avec le yuzu, un agrume local dont les saveurs se situent entre la mandarine et le citron",
+            'price'=>'6',
+            'dessert_id'=>'3',
+        ]);
+        Item::create([
+            'name'=>'Tiramissu Matcha',
+            'description'=>"Délicat et équilibré combinant les saveurs du mascarpone et du matcha.",
+            'price'=>'7',
+            'dessert_id'=>'4',
+        ]);
+        Item::create([
+            'name'=>'Dango',
+            'description'=>"Cette petite brochette composée de trois boules faites de riz gluant apportera le printemps dans votre assiette",
+            'price'=>'5',
+            'dessert_id'=>'5',
+        ]);
+
+
+
 
 
 

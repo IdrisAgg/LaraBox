@@ -19,7 +19,7 @@
             {{-- Découvrez le menu composé de plats savoureusement concocté par notre chef venu tout droit d'une ville au Japon, je sais pas laquelle, ayant travaillé dans le restaurent tata au japon putain je suis drole --}}
             {{-- @if (Auth::user()->isAdmin == null) --}}
             <div class="text-center mt-">
-                <a href="afficheAllResto" class="btn btn-outline-info ">réserver</a>
+                <a href="afficheAllResto" class="btn btn-outline-info ">Voir</a>
             </div>
             {{-- @endif --}}
         </div>
