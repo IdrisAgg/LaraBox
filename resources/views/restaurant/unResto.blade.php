@@ -17,8 +17,7 @@
             <p class="card-text"><strong></strong>{{ $unResto->horaireDebut }} - {{ $unResto->horaireFin }} </p>
             <p class="card-text"><strong></strong>{{ $unResto->adresse }} - {{ $unResto->ville }}</p>
             <p class="card-text"><strong></strong>{{ $unResto->numero }}</p>
-            <p class="card-text"><strong></strong>{{ $unResto->numero }}</p>
-            <p class="card-text"><strong></strong></p>
+            <img class="d-flex justify-content-center" width="25px" src="/images/instagram.png" alt="logo_facebook">
 
             {{-- @if (Auth::user()->isAdmin == null)
             <div class="text-center mt-">
@@ -26,7 +25,6 @@
             </div>
             @endif --}}
         </div>
-
 </div>
 
 

@@ -10,7 +10,6 @@
             <td>Nom</td>
             <td>Descriprion</td>
             <td>Prix</td>
-
             <td>Restaurent associé</td>
             <td>Action</td>
 
@@ -29,9 +28,8 @@
         <td>{{$item->price }}</td>
 
         @if (!empty($item->plat->gras))
-            <td>{{$item->plat->gras}}</td>
-            <td>{{$item->plat->lvlPiment}}</td>
-
+            {{-- <td>{{$item->plat->gras}}</td>
+            <td>{{$item->plat->lvlPiment}}</td> --}}
         @else
 
         @endif
