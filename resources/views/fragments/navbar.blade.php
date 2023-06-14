@@ -18,8 +18,8 @@
         </li>
 
 
-          {{-- @if (Auth::user()->isAdmin == '1' || Auth::user()->isAdmin == null) --}}
-          <li class="nav-item dropdown">
+        @if (isset(Auth::user()->isAdmin) and Auth::user()->isAdmin == 1)
+        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             ADMIN ACTIONS
           </a>
@@ -49,8 +49,8 @@
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
         </li>
-        if
-          {{-- @endif --}}
+
+          @endif
 
 
        <li class="nav-item">

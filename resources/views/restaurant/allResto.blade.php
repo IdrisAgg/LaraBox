@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-<div class="text-center"><h1>Liste restaurents :</h1></div>
+<div class="text-center"><h1>Liste restaurants :</h1></div>
 <div class=" text-center my-5">
 
 <?php
