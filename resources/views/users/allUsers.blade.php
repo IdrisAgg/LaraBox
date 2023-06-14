@@ -33,7 +33,7 @@ foreach($users as $user) {
 
     <td>
         <a href="/formPlat/{{$user->id}}" class="btn btn-secondary">voir les infos</a>
-        <a href="/deleteResto/{{$user->id}}" class="btn btn-danger">Supprimer</a>
+        <a href="/deleteUser/{{$user->id}}" class="btn btn-danger">Supprimer</a>
     </td>
 
 
