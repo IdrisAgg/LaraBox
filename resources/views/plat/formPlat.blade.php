@@ -54,14 +54,16 @@ créer resto
                     Très fort
             </div>
 
-            <div class="d-flex justify-content-center ">
+            <div class="d-flex justify-content-center mt-5">
                 <label class="form-label mx-2" for="">nom</label>
             </div>
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center ">
                 <input class="form-control w-25"  type="text" id="nom" name="name">
             </div>
 
-                            <input class="form-control w-25"  value="" type="text" id="nom" name="plat_id">
+            <div class="d-flex justify-content-center mt-3">
+                <input class="form-control w-25"  value="" type="hidden" id="nom" name="plat_id">
+            </div>
 
             <div class="d-flex justify-content-center mt-3">
                 <label class="form-label mx-2" for="">description</label>
@@ -71,14 +73,14 @@ créer resto
             </div>
 
             <div class="d-flex justify-content-center mt-3">
-                <label class="form-label mx-2" for="">price</label>
+                <label class="form-label mx-2" for="">prix</label>
             </div>
             <div class="d-flex justify-content-center ">
                 <input class="form-control w-25"  type="text" name="price">
             </div>
 
             <div class="d-flex justify-content-center ">
-                <input class="form-control w-25" value='{{$resto->id}}' type="text" name="resto_id">
+                <input class="form-control w-25" value='{{$resto->id}}' type="hidden" name="resto_id">
             </div>
 
             {{-- <div class="d-flex justify-content-center ">

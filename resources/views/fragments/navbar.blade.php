@@ -14,6 +14,20 @@
           <a class="nav-link" href="/afficheAllResto">Liste des restaurants</a>
         </li>
 
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              mes données
+            </a>
+              <ul class="dropdown-menu">
+              <li class="bg-dark text-white text-center">informations</li>
+                  <li><a class="dropdown-item" href="/todo">Voir mes commandes</a></li>
+                  <li><a class="dropdown-item" href="/allResa">Voir mes réservations</a>
+                  </li>
+              </ul>
+          </li>
+        <li class="nav-item">
+        </li>
+
         <li class="nav-item">
         </li>
 

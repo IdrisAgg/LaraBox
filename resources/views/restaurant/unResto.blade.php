@@ -33,7 +33,7 @@
             <div class="card-body ">
                 <h5 class="card-title text-center ">MENU</h5>
                 <hr>
-                <p class="card-text text-center">Découvrez le menu composé de plats savoureusement concocté par notre chef venu tout droit d'une ville au Japon, je sais pas laquelle, ayant travaillé dans le restaurent tata au japon putain je suis drole </p>
+                <p class="card-text text-center">Découvrez le menu composé de produits de qualité</p>
                 {{-- @if (Auth::user()->isAdmin == null) --}}
                 <div class="text-center mt-">
                     <a href="/createSelection/{{$unResto->id}}" class="btn btn-outline-info ">Voir le menu</a>
@@ -62,7 +62,7 @@
             <div class="card-body">
                 <h5 class="card-title  text-center">TITRE</h5>
                 <hr>
-                <p class="card-text text-center">descriptiondescriptiondescriptiondescription</p>
+                <p class="card-text text-center">à compléter </p>
                 {{-- @if (Auth::user()->isAdmin == null) --}}
                 <div class="text-center mt-">
                     <a href="/createOrder" class="btn btn-outline-info ">PLUS...</a>
@@ -75,7 +75,7 @@
             <div class="card-body">
                 <h5 class="card-title text-center">TITRE</h5>
                 <hr>
-                <p class="card-text text-center">descriptiondescriptiondescriptiondescription</p>
+                <p class="card-text text-center">à compléter</p>
                 {{-- @if (Auth::user()->isAdmin == null) --}}
                 <div class="text-center mt-">
                     <a href="/allSelection" class="btn btn-outline-info ">PLUS...</a>
