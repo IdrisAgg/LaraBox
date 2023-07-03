@@ -2,16 +2,10 @@
 
 @section('content')
 <div class="text-center"><h3>ACCUEIL</h3></div>
-<div class="d-flex justify-content-center">
-    <img class="w-25" src="images/ramenBackground.jpg" alt="">
-    <p class="mt-5">Le ramen est un plat</p>
-</div>
 
-<div class="d-flex justify-content-start"><img class="w-25" src="images/ramenBackground.jpg" alt=""></div>
-<div class="d-flex justify-content-end"><img class="w-25" src="images/ramenBackground1.png" alt=""></div>
 
-<div class=" d-flex justify-content-center mt-5">
-    <div class="card mx-3 col-xs-12 col-sm-5 col-md-5 col-lg-4" >
+<div class="d-flex justify-content-end">
+    <div class="card mx-3 col-xs-12 col-sm-5 col-md-5 col-lg-4" style="height: 10%; margin-top:10%">
         <div class="card-body ">
             <h5 class="card-title text-center ">Liste des restaurants</h5>
             <hr>
@@ -24,11 +18,15 @@
             {{-- @endif --}}
         </div>
     </div>
-    <div class="card mx-1 col-xs-12 col-sm-5 col-md-5 col-lg-4" >
+        <img class="w-50" src="images/ramenBackground1.png" alt="">
+</div>
+<div class="d-flex justify-content-">
+    <img class="w-50" src="images/ramenBackground1.png" alt="">
+    <div class="card mx-1 col-xs-12 col-sm-5 col-md-5 col-lg-4" style="height: 10%; margin-top:10%">
         <div class="card-body">
             <h5 class="card-title  text-center">TITRE </h5>
             <hr>
-            <p class="card-text text-center">descriptiondescriptiondescriptiondescription</p>
+            <p class="card-text text-center">Fonctionnalité en attente</p>
             {{-- @if (Auth::user()->isAdmin == null) --}}
             <div class="text-center mt-">
                 <a href="/createOrder" class="btn btn-outline-info ">réserver</a>
@@ -38,6 +36,11 @@
     </div>
 </div>
 
+<div class=" d-flex justify-content-center mt-5">
+
+
+</div>
+
 
 
 <div class=" d-flex justify-content-center mt-">
@@ -45,7 +48,7 @@
         <div class="card-body">
             <h5 class="card-title  text-center">TITRE</h5>
             <hr>
-            <p class="card-text text-center">descriptiondescriptiondescriptiondescription</p>
+            <p class="card-text text-center">Fonctionnalité en attente</p>
             {{-- @if (Auth::user()->isAdmin == null) --}}
             <div class="text-center mt-">
                 <a href="/createOrder" class="btn btn-outline-info ">réserver</a>
@@ -58,7 +61,7 @@
         <div class="card-body">
             <h5 class="card-title text-center">TITRE</h5>
             <hr>
-            <p class="card-text text-center">descriptiondescriptiondescriptiondescription</p>
+            <p class="card-text text-center">Fonctionnalité en attente</p>
             {{-- @if (Auth::user()->isAdmin == null) --}}
             <div class="text-center mt-">
                 <a href="/allSelection" class="btn btn-outline-info ">réserver</a>

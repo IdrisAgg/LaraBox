@@ -16,9 +16,9 @@ créer resto
 
             @foreach($items as $item)
             <div class="  ">
-                @if ($item->entree_id != null)
+                @if ($item->entree_id != null and $item->resto_id == $resto->id)
                 <div class=" mt-3"><u><strong >{{$item->name}}</strong></u></div>
-                <div class="">{{$item->description }} - {{$item->price .'€'}}</div>
+                <div class="">{{$item->entree->nom }} - {{$item->price .'€'}}</div>
                 @endif
             </div>
             @endforeach
@@ -31,13 +31,16 @@ créer resto
 
                 <h4 class="text-center mt-5"> Plat</h4>
 
-                @foreach($items as $item)
-                <div class="text-center" >
-                    @if ($item->plat_id != null)
-                    <div class="mt-3"><u><strong>{{$item->name}}</strong></u></div>
-                    <div class="">{{$item->description }} - {{$item->price .'€'}}</div>
-                    <div><i>taux de gras:  {{$item->plat->gras }}</i></div>
-                    <div><i>Force du piment:  {{$item->plat->lvlPiment }}</i></div>
+                @foreach($plats as $plat)
+                <div class="text-center">
+                    @if ($plat->item_id != null and $plat->item->resto_id == $resto->id)
+                    <div class="mt-3"><u><strong>{{$plat->item->name}}</strong></u></div>
+                    <div class="">{{$plat->item->description }} - {{$plat->item->price .'€'}}</div>
+                    @if (!empty($plat->gras))
+                    <div><i>taux de gras:  {{$plat->gras }}</i></div>
+                    <div><i>Force du piment:  {{$plat->lvlPiment }}</i></div>
+
+                    @endif
                     @endif
                 @endforeach
         </div>
@@ -49,11 +52,13 @@ créer resto
                 <h4>Dessert</h4>
 
                 {{-- <img class="" src="/images/dessertBackground.png" width="100px" alt=""> --}}
-                @foreach($items as $item)
-                    @if ($item->dessert_id != null)
-                    <div class="mt-3"><u><strong>{{$item->name}}</strong></u></div>
-                    <div>{{$item->description }} - {{$item->price .'€'}}</div>
-                    <div><i>Taux de sucre:  {{$item->dessert->tauxSucre }}</i></div>
+                @foreach($desserts as $dessert)
+                    @if ($dessert->item_id != null and $dessert->item->resto_id == $resto->id)
+                    <div class="mt-3"><u><strong>{{$dessert->item->name}}</strong></u></div>
+                    <div>{{$dessert->item->description }} - {{$dessert->item->price .'€'}}</div>
+                    @if (!empty($dessert->tauxSucre))
+                    <div><i>Taux de sucre:  {{$dessert->tauxSucre }}</i></div>
+                    @endif
                     @endif
                 @endforeach
         </div>

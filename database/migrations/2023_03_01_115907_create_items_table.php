@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string("name");
             $table->string("description");
             $table->float("price");
-            $table->foreignId("entree_id")->nullable()->constrained("entrees","id")->onDelete("cascade");
-            $table->foreignId("plat_id")->nullable()->constrained("plats","id")->onDelete("cascade");
-            $table->foreignId("dessert_id")->nullable()->constrained("desserts","id")->onDelete("cascade");
+            // $table->foreignId("entree_id")->nullable()->constrained("entrees","id")->onDelete("cascade");
+            // $table->foreignId("plat_id")->nullable()->constrained("plats","id")->onDelete("cascade");
+            // $table->foreignId("dessert_id")->nullable()->constrained("desserts","id")->onDelete("cascade");
             $table->foreignId("resto_id")->nullable()->constrained("restaurents","id")->onDelete("cascade");
             // $table->foreignId("select_id")->constrained("selections","id")->onDelete("cascade");
             $table->timestamps();

@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('plats', function (Blueprint $table) {
-
-            $table->foreignId("item_id")->nullable()->constrained("items","id")->onDelete("cascade");
-            $table->string('gras')->nullable();
-            $table->string('lvlPiment')->nullable();
+        Schema::create('pivot_table_entree_resto', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('entree_id')->constrained('entrees','id')->onDelete('cascade');
+            $table->foreignId('resto_id')->constrained('restaurents','id')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('plats');
+        Schema::dropIfExists('pivot_table_entree_resto');
     }
 };

@@ -82,6 +82,9 @@ créer resto
             <div class="d-flex justify-content-center ">
                 <input class="form-control w-25" value='{{$resto->id}}' type="hidden" name="resto_id">
             </div>
+            {{-- <div class="d-flex justify-content-center ">
+                <input class="form-control w-25" value='{{$plat->item_id}}' type="text" name="resto_id">
+            </div> --}}
 
             {{-- <div class="d-flex justify-content-center ">
                 <input class="form-control w-25" value='{{$resto->id}}' type="text" name="plat_id">

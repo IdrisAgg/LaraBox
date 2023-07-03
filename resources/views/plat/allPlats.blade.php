@@ -21,14 +21,14 @@
 foreach($plats as $plat) {
 ?>
 <tr>
-    <td>{{$plat->id}}</td>
+    <td>{{$plat->item_id}}</td>
     <td>{{$plat->gras}}</td>
     <td>{{$plat->lvlPiment }}</td>
 
     <td class="d-flex justify-content-center ">
         <a href="" class="btn btn-secondary mx-1">Ajouter un plat</a>
-        <a href="/plat/{{$plat->id}}" class="btn btn-secondary mx-1">SELECTION</a>
-        <form action="{{route('plat.destroy',$plat)}}" method="POST">
+        <a href="/plat/{{$plat->item_id}}" class="btn btn-secondary mx-1">SELECTION</a>
+        <form action="" method="POST">
             @csrf
             @method('DELETE')
             <button type="submit" class="btn btn-danger">Supprimer</a></button>

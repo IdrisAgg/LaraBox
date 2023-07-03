@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use App\Models\Item;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+
 class Restaurent extends Model
 {
     use HasFactory;
@@ -25,7 +27,9 @@ class Restaurent extends Model
     public function items(): HasMany{
         return $this-> hasMany(Item::class,"selection_id");
     }
-
+    public function entrees(): BelongsToMany{
+        return $this-> BelongsToMany(Entree::class,"entree_id");
+    }
     protected $fillable = [
         'nom',
         'ville',

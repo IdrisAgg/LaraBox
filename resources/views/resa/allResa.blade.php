@@ -6,10 +6,11 @@ créer resto
 @section('content')
 
                 <div class="d-flex justify-content-center ">
-                    <h1>ORDERS DU RESTAURANT</h1>
+                    <h1>RÉSERVATIONS </h1>
                 </div>
                 @foreach($orders as $order)
-                @if ($order->user_id == Auth::user()->id)
+                @if ($order->user_id == Auth::user()->id and isset($order->id))
+
                 <div class="d-flex justify-content-center col-sm-12 col-md-12 col-lg-12">
                     <div class="card w-50  my-3 ">
                         <div class="d-flex justify-content-between ">
@@ -28,5 +29,8 @@ créer resto
                 </div>
                 @endif
                 @endforeach
+                @if (!isset($order->id))
+                <div class="text-center my-5">Aucune réservations</div>
+                @endif
 
 @endsection

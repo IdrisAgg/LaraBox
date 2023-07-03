@@ -30,7 +30,8 @@ class PlatController extends Controller
     public function formPlat($id)
     {
         $resto = Restaurent::find($id);
-        return view('plat.formPlat')->with('resto',$resto);
+        $items = Item::all();
+        return view('plat.formPlat')->with('resto',$resto)->with('items',$items);
     }
 
     /**
