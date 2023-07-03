@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use App\Models\Item;
+use App\Models\Restaurent;
+
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Entree extends Item
@@ -14,4 +16,10 @@ class Entree extends Item
     public function restos(): BelongsToMany{
         return $this-> BelongsToMany(Restaurent::class,"resto_id");
     }
+
+    protected $fillable = [
+        'nom',
+        "description",
+        "price",
+    ];
 }

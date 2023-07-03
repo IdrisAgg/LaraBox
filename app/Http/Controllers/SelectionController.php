@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dessert;
+use App\Models\Entree;
 use App\Models\Item;
 use App\Models\Plat;
 use App\Models\Restaurent;
@@ -71,8 +72,9 @@ class SelectionController extends Controller
         $resto = Restaurent::find($id);
         $items = Item::GET();
         $plats = Plat::GET();
+        $entrees = Entree::GET();
         $desserts = Dessert::GET();
-        return view('selection.formSelection')->with('resto',$resto)->with('items',$items)->with('plats',$plats)->with('desserts',$desserts);
+        return view('selection.formSelection')->with('resto',$resto)->with('items',$items)->with('plats',$plats)->with('desserts',$desserts)->with('entrees',$entrees);
     }
 
 

@@ -13,6 +13,7 @@ use App\Models\Restaurent;
 use App\Models\Selection;
 use App\Models\Specialisation;
 use App\Models\User;
+use NunoMaduro\Collision\Contracts\Adapters\Phpunit\HasPrintableTestCaseName;
 
 class DatabaseSeeder extends Seeder
 {
@@ -164,19 +165,29 @@ class DatabaseSeeder extends Seeder
 
 
         Entree::create([
-            'nom' => 'Kaarage'
+            'nom' => 'Kaarage',
+            'description' => "Poulet très croustillant, enrobé de chapelure panko, très fondant et juteux à l'intérieur",
+            'price' => '7'
         ]);
         Entree::create([
-            'nom' => 'Takoyaki'
+            'nom' => 'Takoyaki',
+            'description' => 'Boulette de poulpe, crémeuse et fondante',
+            'price' => '5'
         ]);
         Entree::create([
-            'nom' => 'ToriDon'
+            'nom' => 'ToriDon',
+            'description' => 'Dés de poulet marinés 24h, accompagnée de son bol de riz',
+            'price' => '6'
         ]);
         Entree::create([
-            'nom' => 'Edamame'
+            'nom' => 'Edamame',
+            'description' => "Haricot japonais, cuit dans de l'eau salée",
+            'price' => '4',
         ]);
         Entree::create([
-            'nom' => 'Gyoza'
+            'nom' => 'Gyoza',
+            'description' => 'Raviolis japonais grillé et fondant, frit puis grillé à la poele',
+            'price' => '7'
         ]);
 
 

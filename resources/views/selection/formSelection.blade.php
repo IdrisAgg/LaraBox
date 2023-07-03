@@ -12,14 +12,12 @@ créer resto
 
 <div class="justify-content-around text-center mt-5 ">
             {{-- <img class="" src="/images/entreeBackground.png" width="100px" alt=""> --}}
-            <h4 class="" style="">Entrées</h4>
+            <h4 class="" >Entrées</h4>
 
-            @foreach($items as $item)
+            @foreach($entrees as $entree)
             <div class="  ">
-                @if ($item->entree_id != null and $item->resto_id == $resto->id)
-                <div class=" mt-3"><u><strong >{{$item->name}}</strong></u></div>
-                <div class="">{{$item->entree->nom }} - {{$item->price .'€'}}</div>
-                @endif
+                <div class=" mt-3"><u><strong >{{$entree->nom}}</strong></u></div>
+                <div class="">{{$entree->description }} - {{$entree->price .'€'}}</div>
             </div>
             @endforeach
 
