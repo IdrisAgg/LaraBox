@@ -226,28 +226,28 @@ class DatabaseSeeder extends Seeder
         ]);
         Item::create([
             'name' => 'Udon Curry',
-            'description' => "Bouillon végétatien, mijoté avec 12 légumes de saison, très riche en gout ",
+            'description' => "Bouillon à base de curry piquant, boeuf finement tranché, bouillon tès riche en gout  ",
             'price' => '8',
             'resto_id' => '2'
 
         ]);
         Item::create([
             'name' => ' Tanuki Udon',
-            'description' => "Bouillon végétatien, mijoté avec 12 légumes de saison, très riche en gout ",
+            'description' => "Bouillon très épais et gras, non piquant mais fort en assaissonnement",
             'price' => '8',
             'resto_id' => '2'
 
         ]);
         Item::create([
             'name' => 'Tempura Udon',
-            'description' => "Bouillon végétatien, mijoté avec 12 légumes de saison, très riche en gout ",
+            'description' => "Udon claire, servi avec un tempura de crevette ",
             'price' => '8',
             'resto_id' => '2'
 
         ]);
         Item::create([
             'name' => 'Spicy udon',
-            'description' => "Bouillon végétatien, mijoté avec 12 légumes de saison, très riche en gout ",
+            'description' => "Le udon le plus piquant, bouillon épais et riche en saveur ",
             'price' => '8',
             'resto_id' => '2'
 
