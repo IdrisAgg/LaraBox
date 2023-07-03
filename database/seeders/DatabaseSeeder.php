@@ -47,16 +47,17 @@ class DatabaseSeeder extends Seeder
             'numero' => '01.01.01.01.01',
             'localisation' => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.1875519103205!2d2.3359149156742665!3d48.854633879287185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671d8cee50be3%3A0xe73cffb0381b3105!2sKodawari%20Ramen%20(Yokoch%C5%8D)!5e0!3m2!1sfr!2sfr!4v1686752642477!5m2!1sfr!2sfr",
             'image' => '/images/Kodawari_Ramen_Yaokocho.jpg',
+            'spe_id'
         ]);
 
         restaurent::create([
-            'nom' => 'Kintaro',
+            'nom' => 'Udon Jubei',
             'ville' => 'Paris',
-            'adresse' => '24 Rue Saint-Augustin',
+            'adresse' => '39 Rue Sainte-Anne',
             'horaireDebut' => '11:30',
             'horaireFin' => '22:15',
-            'numero' => '01 47 42 13 14',
-            'localisation' => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20997.42823325844!2d2.3156456357807076!3d48.86434020794388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e3a886e99b5%3A0x1e3e11397842cf55!2sKintaro!5e0!3m2!1sfr!2sfr!4v1686753119730!5m2!1sfr!2sfr",
+            'numero' => '01 40 15 92 54',
+            'localisation' => "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10498.26940897338!2d2.335525!3d48.86646!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2534c93697%3A0xec71142f395db4e6!2sUdon%20Jubey!5e0!3m2!1sfr!2sfr!4v1688386758351!5m2!1sfr!2sfr",
             'image' => '/images/kintaro.jpg',
         ]);
 

@@ -17,6 +17,9 @@
             <p class="card-text"><strong></strong>{{ $unResto->horaireDebut }} - {{ $unResto->horaireFin }} </p>
             <p class="card-text"><strong></strong>{{ $unResto->adresse }} - {{ $unResto->ville }}</p>
             <p class="card-text"><strong></strong>{{ $unResto->numero }}</p>
+            @if(isset($unResto->special->id) )
+            <p class="card-text"><strong></strong>{{ $unResto->special->nom }}</p>
+            @endif
                 <div class="d-flex justify-content-center">
                     <img class="mx-3" width="25px" src="/images/instagram.png" alt="logo_facebook">
                     <img style="margin-right: 20px" width="25px" src="/images/facebook.png" alt="logo_facebook">

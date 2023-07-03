@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('restaurents', function (Blueprint $table) {
             $table->id();
+            $table->foreignId("spe_id")->nullable()->constrained("specialisations","id")->onDelete("cascade");
             $table->string("nom")->nullable();
             $table->string("horaireDebut")->nullable();
             $table->string("horaireFin")->nullable();

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Restaurent;
+use App\Models\Specialisation;
 use Illuminate\Http\Request;
 
 class RestaurentController extends Controller
@@ -20,7 +21,8 @@ class RestaurentController extends Controller
      */
     public function create()
     {
-        return view('restaurant.formResto');
+        $spes = Specialisation::all();
+        return view('restaurant.formResto')->with('spes',$spes);
     }
 
     /**

@@ -38,6 +38,7 @@ créer resto
                         <option value="">-- Soir --</option>
                         <option value="19h00">19h00</option>
                         <option value="20h30">20h30</option>
+                    </select>
                 </div>
 
                 <div class="d-flex justify-content-center mt-3">

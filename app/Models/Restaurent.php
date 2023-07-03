@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use App\Models\Item;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Restaurent extends Model
@@ -24,6 +25,10 @@ class Restaurent extends Model
         return $this-> hasMany(Selection::class,"selection_id");
     }
 
+    public function special(): BelongsTo{
+        return $this-> BelongsTo(Specialisation::class,"spe_id");
+    } 
+
     public function items(): HasMany{
         return $this-> hasMany(Item::class,"selection_id");
     }
@@ -38,6 +43,9 @@ class Restaurent extends Model
         'horaireFin',
         'numero',
         'localisation',
-        'image'
+        'image',
+        'spe_id'
+
+
     ];
 }

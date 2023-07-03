@@ -47,11 +47,23 @@ créer resto
                 <div class="d-flex justify-content-center ">
                     <input class="form-control w-25"  type="text" name="ville">
                 </div>
+                
+                <div class="d-flex justify-content-center mt-3">
+                    <label class="form-label mx-2" for="">Horaire</label>
+                </div>
 
+                    <div class="d-flex justify-content-center mt-3">
+                    <select class="  form-control w-25"  type="time" id="nom" name="spe_id">
+                        <option class="  text-center " value="">Spécialité</option>
+                        @foreach($spes as $spe)                        
+                        <option value="{{$spe->id}}">{{$spe->nom}}</option>
+                        @endforeach
+                    </select>
+                    </div>
+                
                 <div class="d-flex justify-content-center mt-5">
                     <input class="form-control w-25"  type="text"  placeholder="Localisation" name="localisation">
                 </div>
-
                 <div class="d-flex justify-content-center mt-2">
                     <input class="form-control w-25"  type="file"  name="image">
                 </div>
@@ -59,9 +71,9 @@ créer resto
                 <div class="d-flex justify-content-center mt-2">
                     <button type="submit" class="btn btn-primary px-4 mt-2">Ajouter</button>
                 </div>
+
                 <div class="">
                     <img src="images/kodawaroLogo1.jpg" alt="">
-
                 </div>
             </form>
 @endsection
