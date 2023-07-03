@@ -225,35 +225,35 @@ class DatabaseSeeder extends Seeder
 
         ]);
         Item::create([
-            'name' => 'tonkotsu pork ramen',
+            'name' => 'Udon Curry',
             'description' => "Bouillon végétatien, mijoté avec 12 légumes de saison, très riche en gout ",
             'price' => '8',
             'resto_id' => '1'
 
         ]);
         Item::create([
-            'name' => ' Miso ramen',
+            'name' => ' Tanuki Udon',
             'description' => "Bouillon végétatien, mijoté avec 12 légumes de saison, très riche en gout ",
             'price' => '8',
             'resto_id' => '2'
 
         ]);
         Item::create([
-            'name' => 'Miso spicy ramen',
+            'name' => 'Tempura Udon',
             'description' => "Bouillon végétatien, mijoté avec 12 légumes de saison, très riche en gout ",
             'price' => '8',
             'resto_id' => '2'
 
         ]);
         Item::create([
-            'name' => 'Shoyu ramen',
+            'name' => 'Spicy udon',
             'description' => "Bouillon végétatien, mijoté avec 12 légumes de saison, très riche en gout ",
             'price' => '8',
             'resto_id' => '2'
 
         ]);
         Item::create([
-            'name' => 'Tori Spicy ramen',
+            'name' => 'Niku udon',
             'description' => "Bouillon végétatien, mijoté avec 12 légumes de saison, très riche en gout ",
             'price' => '8',
             'resto_id' => '2'
