@@ -69,7 +69,7 @@ class DatabaseSeeder extends Seeder
             'horaireFin' => '22:15',
             'numero' => '01 40 15 92 54',
             'localisation' => "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10498.26940897338!2d2.335525!3d48.86646!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2534c93697%3A0xec71142f395db4e6!2sUdon%20Jubey!5e0!3m2!1sfr!2sfr!4v1688386758351!5m2!1sfr!2sfr",
-            'image' => '/images/jubey.jpg',
+            'image' => '/images/Jubey.jpg',
             'spe_id'=>'2'
 
         ]);
