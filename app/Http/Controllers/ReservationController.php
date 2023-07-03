@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Carbon\Carbon;
 use App\Models\Reservation;
 use App\Models\Restaurent;
 use Illuminate\Http\Request;
@@ -79,7 +79,8 @@ class ReservationController extends Controller
             'horaire'=>'required',
 
         ]);
-
+        $dateJour = Carbon::now();  
+        
         $order = new Reservation();
 
         $order->name = $request->input('nom');
@@ -88,14 +89,19 @@ class ReservationController extends Controller
         $order->date = $request->input('date');
         $order->horaire = $request->input('horaire');
 
+        if ($order->date< $dateJour)
+        return back();
+        else
         $order->save();
+        
 
         return redirect('/');
     }
 
     public function allResa(){
+        $dateJour = Carbon::now();  
         $orders = Reservation::GET();
-        return view('resa.allResa')->with('orders',$orders);
+        return view('resa.allResa')->with('orders',$orders)->with('dateJour',$dateJour);
     }
 
     public function resaUser(){
