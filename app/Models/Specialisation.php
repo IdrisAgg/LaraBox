@@ -13,4 +13,9 @@ class Specialisation extends Model
     public function resto(): HasMany{
         return $this-> hasMany(Restaurent::class,"resto_id");
     }
+
+    protected $fillable = [
+        'nom',
+        'tempsXp',
+    ];
 }
