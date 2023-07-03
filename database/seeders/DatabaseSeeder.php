@@ -228,7 +228,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Udon Curry',
             'description' => "Bouillon végétatien, mijoté avec 12 légumes de saison, très riche en gout ",
             'price' => '8',
-            'resto_id' => '1'
+            'resto_id' => '2'
 
         ]);
         Item::create([
